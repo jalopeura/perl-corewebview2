@@ -1,0 +1,39 @@
+=pod
+
+=head1 NAME
+
+CoreWebView2::BrowserProcessExitedEventArgs
+
+=head1 VERSION
+
+0.001.000
+
+=head1 SYNOPSIS
+
+TBD
+
+=head1 DESCRIPTION
+
+TBD
+
+=head1 METHODS
+
+=head1 PROPERTIES
+
+=head2 BrowserProcessExitKind
+
+    $browserProcessExitKind = $object->get_BrowserProcessExitKind();
+
+A L<BROWSER_PROCESS_EXIT_KIND|CoreWebView2::constants/BROWSER_PROCESS_EXIT_KIND> constant.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2browserprocessexitedeventargs#get_browserprocessexitkind>.
+
+=head2 BrowserProcessId
+
+    $value = $object->get_BrowserProcessId();
+
+An unsigned integer.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2browserprocessexitedeventargs#get_browserprocessid>.
+
+=cut

@@ -1,0 +1,1570 @@
+=pod
+
+=head1 NAME
+
+CoreWebView2
+
+=head1 VERSION
+
+0.001.000
+
+=head1 SYNOPSIS
+
+TBD
+
+=head1 DESCRIPTION
+
+TBD
+
+=head1 METHODS
+
+=head2 AddHostObjectToScript
+
+    $result = $object->AddHostObjectToScript($name, $object);
+
+Takes
+
+=over
+
+=item * $name: string
+
+=item * $object: VARIANT
+
+=back
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2#addhostobjecttoscript>.
+
+=head2 AddScriptToExecuteOnDocumentCreated
+
+    $result = $object->AddScriptToExecuteOnDocumentCreated($javaScript, $handler);
+
+Takes
+
+=over
+
+=item * $javaScript: string
+
+=item * $handler: event handler object
+
+=back
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+Triggers L</AddScriptToExecuteOnDocumentCreatedCompleted>
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2#addscripttoexecuteondocumentcreated>.
+
+=head2 AddWebResourceRequestedFilter
+
+    $result = $object->AddWebResourceRequestedFilter($uri, $resourceContext);
+
+Takes
+
+=over
+
+=item * $uri: string
+
+=item * $resourceContext: L<WEB_RESOURCE_CONTEXT|CoreWebView2::constants/WEB_RESOURCE_CONTEXT> constant
+
+=back
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2#addwebresourcerequestedfilter>.
+
+=head2 CallDevToolsProtocolMethod
+
+    $result = $object->CallDevToolsProtocolMethod($methodName, $parametersAsJson, $handler);
+
+Takes
+
+=over
+
+=item * $methodName: string
+
+=item * $parametersAsJson: string
+
+=item * $handler: event handler object
+
+=back
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+Triggers L</CallDevToolsProtocolMethodCompleted>
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2#calldevtoolsprotocolmethod>.
+
+=head2 CallDevToolsProtocolMethodForSession
+
+    $result = $object->CallDevToolsProtocolMethodForSession($sessionId, $methodName, $parametersAsJson, $handler);
+
+Takes
+
+=over
+
+=item * $sessionId: string
+
+=item * $methodName: string
+
+=item * $parametersAsJson: string
+
+=item * $handler: event handler object
+
+=back
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+Triggers L</CallDevToolsProtocolMethodCompleted>
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2_11#calldevtoolsprotocolmethodforsession>.
+
+=head2 CapturePreview
+
+    $result = $object->CapturePreview($imageFormat, $imageStream, $handler);
+
+Takes
+
+=over
+
+=item * $imageFormat: L<CAPTURE_PREVIEW_IMAGE_FORMAT|CoreWebView2::constants/CAPTURE_PREVIEW_IMAGE_FORMAT> constant
+
+=item * $imageStream: stream
+
+=item * $handler: event handler object
+
+=back
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+Triggers L</CapturePreviewCompleted>
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2#capturepreview>.
+
+=head2 ClearServerCertificateErrorActions
+
+    $result = $object->ClearServerCertificateErrorActions($handler);
+
+Takes
+
+=over
+
+=item * $handler: event handler object
+
+=back
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+Triggers L</ClearServerCertificateErrorActionsCompleted>
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2_14#clearservercertificateerroractions>.
+
+=head2 ClearVirtualHostNameToFolderMapping
+
+    $result = $object->ClearVirtualHostNameToFolderMapping($hostName);
+
+Takes
+
+=over
+
+=item * $hostName: string
+
+=back
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2_3#clearvirtualhostnametofoldermapping>.
+
+=head2 CloseDefaultDownloadDialog
+
+    $result = $object->CloseDefaultDownloadDialog();
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2_9#closedefaultdownloaddialog>.
+
+=head2 ExecuteScript
+
+    $result = $object->ExecuteScript($javaScript, $handler);
+
+Takes
+
+=over
+
+=item * $javaScript: string
+
+=item * $handler: event handler object
+
+=back
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+Triggers L</ExecuteScriptCompleted>
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2#executescript>.
+
+=head2 GetDevToolsProtocolEventReceiver
+
+    $receiver = $object->GetDevToolsProtocolEventReceiver($eventName);
+
+Takes
+
+=over
+
+=item * $eventName: string
+
+=back
+
+Returns a L<CoreWebView2::DevToolsProtocolEventReceiver> object
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2#getdevtoolsprotocoleventreceiver>.
+
+=head2 GetFavicon
+
+    $result = $object->GetFavicon($format, $completedHandler);
+
+Takes
+
+=over
+
+=item * $format: L<FAVICON_IMAGE_FORMAT|CoreWebView2::constants/FAVICON_IMAGE_FORMAT> constant
+
+=item * $completedHandler: event handler object
+
+=back
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+Triggers L</GetFaviconCompleted>
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2_15#getfavicon>.
+
+=head2 GoBack
+
+    $result = $object->GoBack();
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2#goback>.
+
+=head2 GoForward
+
+    $result = $object->GoForward();
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2#goforward>.
+
+=head2 Navigate
+
+    $result = $object->Navigate($uri);
+
+Takes
+
+=over
+
+=item * $uri: string
+
+=back
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2#navigate>.
+
+=head2 NavigateToString
+
+    $result = $object->NavigateToString($htmlContent);
+
+Takes
+
+=over
+
+=item * $htmlContent: string
+
+=back
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2#navigatetostring>.
+
+=head2 NavigateWithWebResourceRequest
+
+    $result = $object->NavigateWithWebResourceRequest($request);
+
+Takes
+
+=over
+
+=item * $request: L<CoreWebView2::WebResourceRequest> object
+
+=back
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2_2#navigatewithwebresourcerequest>.
+
+=head2 OpenDefaultDownloadDialog
+
+    $result = $object->OpenDefaultDownloadDialog();
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2_9#opendefaultdownloaddialog>.
+
+=head2 OpenDevToolsWindow
+
+    $result = $object->OpenDevToolsWindow();
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2#opendevtoolswindow>.
+
+=head2 OpenTaskManagerWindow
+
+    $result = $object->OpenTaskManagerWindow();
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2_6#opentaskmanagerwindow>.
+
+=head2 PostSharedBufferToScript
+
+    $result = $object->PostSharedBufferToScript($sharedBuffer, $access, $additionalDataAsJson);
+
+Takes
+
+=over
+
+=item * $sharedBuffer: L<CoreWebView2::SharedBuffer> object
+
+=item * $access: L<SHARED_BUFFER_ACCESS|CoreWebView2::constants/SHARED_BUFFER_ACCESS> constant
+
+=item * $additionalDataAsJson: string
+
+=back
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2_17#postsharedbuffertoscript>.
+
+=head2 PostWebMessageAsJson
+
+    $result = $object->PostWebMessageAsJson($webMessageAsJson);
+
+Takes
+
+=over
+
+=item * $webMessageAsJson: string
+
+=back
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2#postwebmessageasjson>.
+
+=head2 PostWebMessageAsString
+
+    $result = $object->PostWebMessageAsString($webMessageAsString);
+
+Takes
+
+=over
+
+=item * $webMessageAsString: string
+
+=back
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2#postwebmessageasstring>.
+
+=head2 Print
+
+    $result = $object->Print($printSettings, $handler);
+
+Takes
+
+=over
+
+=item * $printSettings: L<CoreWebView2::PrintSettings> object
+
+=item * $handler: event handler object
+
+=back
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+Triggers L</PrintCompleted>
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2_16#print>.
+
+=head2 PrintToPdf
+
+    $result = $object->PrintToPdf($resultFilePath, $printSettings, $handler);
+
+Takes
+
+=over
+
+=item * $resultFilePath: string
+
+=item * $printSettings: L<CoreWebView2::PrintSettings> object
+
+=item * $handler: event handler object
+
+=back
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+Triggers L</PrintToPdfCompleted>
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2_7#printtopdf>.
+
+=head2 PrintToPdfStream
+
+    $result = $object->PrintToPdfStream($printSettings, $handler);
+
+Takes
+
+=over
+
+=item * $printSettings: L<CoreWebView2::PrintSettings> object
+
+=item * $handler: event handler object
+
+=back
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+Triggers L</PrintToPdfStreamCompleted>
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2_16#printtopdfstream>.
+
+=head2 Reload
+
+    $result = $object->Reload();
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2#reload>.
+
+=head2 RemoveHostObjectFromScript
+
+    $result = $object->RemoveHostObjectFromScript($name);
+
+Takes
+
+=over
+
+=item * $name: string
+
+=back
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2#removehostobjectfromscript>.
+
+=head2 RemoveScriptToExecuteOnDocumentCreated
+
+    $result = $object->RemoveScriptToExecuteOnDocumentCreated($id);
+
+Takes
+
+=over
+
+=item * $id: string
+
+=back
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2#removescripttoexecuteondocumentcreated>.
+
+=head2 RemoveWebResourceRequestedFilter
+
+    $result = $object->RemoveWebResourceRequestedFilter($uri, $resourceContext);
+
+Takes
+
+=over
+
+=item * $uri: string
+
+=item * $resourceContext: L<WEB_RESOURCE_CONTEXT|CoreWebView2::constants/WEB_RESOURCE_CONTEXT> constant
+
+=back
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2#removewebresourcerequestedfilter>.
+
+=head2 Resume
+
+    $result = $object->Resume();
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2_3#resume>.
+
+=head2 SetVirtualHostNameToFolderMapping
+
+    $result = $object->SetVirtualHostNameToFolderMapping($hostName, $folderPath, $accessKind);
+
+Takes
+
+=over
+
+=item * $hostName: string
+
+=item * $folderPath: string
+
+=item * $accessKind: L<HOST_RESOURCE_ACCESS_KIND|CoreWebView2::constants/HOST_RESOURCE_ACCESS_KIND> constant
+
+=back
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2_3#setvirtualhostnametofoldermapping>.
+
+=head2 ShowPrintUI
+
+    $result = $object->ShowPrintUI($printDialogKind);
+
+Takes
+
+=over
+
+=item * $printDialogKind: L<PRINT_DIALOG_KIND|CoreWebView2::constants/PRINT_DIALOG_KIND> constant
+
+=back
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2_16#showprintui>.
+
+=head2 Stop
+
+    $result = $object->Stop();
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2#stop>.
+
+=head2 TrySuspend
+
+    $result = $object->TrySuspend($handler);
+
+Takes
+
+=over
+
+=item * $handler: event handler object
+
+=back
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+Triggers L</TrySuspendCompleted>
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2_3#trysuspend>.
+
+=head1 PROPERTIES
+
+=head2 BrowserProcessId
+
+    $value = $object->get_BrowserProcessId();
+
+An unsigned integer.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2#get_browserprocessid>.
+
+=head2 CanGoBack
+
+    $canGoBack = $object->get_CanGoBack();
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2#get_cangoback>.
+
+=head2 CanGoForward
+
+    $canGoForward = $object->get_CanGoForward();
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2#get_cangoforward>.
+
+=head2 ContainsFullScreenElement
+
+    $containsFullScreenElement = $object->get_ContainsFullScreenElement();
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2#get_containsfullscreenelement>.
+
+=head2 CookieManager
+
+    $cookieManager = $object->get_CookieManager();
+
+A L<CoreWebView2::CookieManager> object.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2_2#get_cookiemanager>.
+
+=head2 DefaultDownloadDialogCornerAlignment
+
+    $value = $object->get_DefaultDownloadDialogCornerAlignment();
+    $object->put_DefaultDownloadDialogCornerAlignment($value);
+
+A L<DEFAULT_DOWNLOAD_DIALOG_CORNER_ALIGNMENT|CoreWebView2::constants/DEFAULT_DOWNLOAD_DIALOG_CORNER_ALIGNMENT> constant.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2_9#get_defaultdownloaddialogcorneralignment>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2_9#put_defaultdownloaddialogcorneralignment>.
+
+=head2 DefaultDownloadDialogMargin
+
+    $value = $object->get_DefaultDownloadDialogMargin();
+    $object->put_DefaultDownloadDialogMargin($value);
+
+A POINT (arrayref C<[x, y]>).
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2_9#get_defaultdownloaddialogmargin>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2_9#put_defaultdownloaddialogmargin>.
+
+=head2 DocumentTitle
+
+    $title = $object->get_DocumentTitle();
+
+A string.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2#get_documenttitle>.
+
+=head2 Environment
+
+    $environment = $object->get_Environment();
+
+A L<CoreWebView2::Environment> object.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2_2#get_environment>.
+
+=head2 FaviconUri
+
+    $value = $object->get_FaviconUri();
+
+A string.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2_15#get_faviconuri>.
+
+=head2 FrameId
+
+    $id = $object->get_FrameId();
+
+An unsigned integer.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2_20#get_frameid>.
+
+=head2 IsDefaultDownloadDialogOpen
+
+    $value = $object->get_IsDefaultDownloadDialogOpen();
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2_9#get_isdefaultdownloaddialogopen>.
+
+=head2 IsDocumentPlayingAudio
+
+    $value = $object->get_IsDocumentPlayingAudio();
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2_8#get_isdocumentplayingaudio>.
+
+=head2 IsMuted
+
+    $value = $object->get_IsMuted();
+    $object->put_IsMuted($value);
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2_8#get_ismuted>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2_8#put_ismuted>.
+
+=head2 IsSuspended
+
+    $isSuspended = $object->get_IsSuspended();
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2_3#get_issuspended>.
+
+=head2 MemoryUsageTargetLevel
+
+    $level = $object->get_MemoryUsageTargetLevel();
+    $object->put_MemoryUsageTargetLevel($level);
+
+A L<MEMORY_USAGE_TARGET_LEVEL|CoreWebView2::constants/MEMORY_USAGE_TARGET_LEVEL> constant.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2_19#get_memoryusagetargetlevel>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2_19#put_memoryusagetargetlevel>.
+
+=head2 Profile
+
+    $value = $object->get_Profile();
+
+A L<CoreWebView2::Profile> object.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2_13#get_profile>.
+
+=head2 Settings
+
+    $settings = $object->get_Settings();
+
+A L<CoreWebView2::Settings> object.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2#get_settings>.
+
+=head2 Source
+
+    $uri = $object->get_Source();
+
+A string.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2#get_source>.
+
+=head2 StatusBarText
+
+    $value = $object->get_StatusBarText();
+
+A string.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2_12#get_statusbartext>.
+
+=head1 EVENTS
+
+=head2 AddScriptToExecuteOnDocumentCreatedCompleted
+
+    $result = $object->AddScriptToExecuteOnDocumentCreated(...);
+
+    # in handler class
+    sub AddScriptToExecuteOnDocumentCreatedCompleted {
+        my ($self, $errorCode, $id) = @_;
+
+        # handle the event here
+    }
+
+See L</AddScriptToExecuteOnDocumentCreated>.
+
+Passes
+
+=over
+
+=item * $errorCode: L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+=item * $id: string
+
+=back
+
+=head2 BasicAuthenticationRequested
+
+    $token = $object->add_BasicAuthenticationRequested($handler);
+    $result = $object->remove_BasicAuthenticationRequested($token);
+
+    # in handler class
+    sub BasicAuthenticationRequested {
+        my ($self, $sender, $args) = @_;
+
+        # handle the event here
+    }
+
+Passes
+
+=over
+
+=item * $sender: L<CoreWebView2> object
+
+=item * $args: L<CoreWebView2::BasicAuthenticationRequestedEventArgs> object
+
+=back
+
+=head2 CallDevToolsProtocolMethodCompleted
+
+    $result = $object->CallDevToolsProtocolMethod(...);
+    $result = $object->CallDevToolsProtocolMethodForSession(...);
+
+    # in handler class
+    sub CallDevToolsProtocolMethodCompleted {
+        my ($self, $errorCode, $returnObjectAsJson) = @_;
+
+        # handle the event here
+    }
+
+See L</CallDevToolsProtocolMethod>, L</CallDevToolsProtocolMethodForSession>.
+
+Passes
+
+=over
+
+=item * $errorCode: L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+=item * $returnObjectAsJson: string
+
+=back
+
+=head2 CapturePreviewCompleted
+
+    $result = $object->CapturePreview(...);
+
+    # in handler class
+    sub CapturePreviewCompleted {
+        my ($self, $errorCode) = @_;
+
+        # handle the event here
+    }
+
+See L</CapturePreview>.
+
+Passes
+
+=over
+
+=item * $errorCode: L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+=back
+
+=head2 ClearServerCertificateErrorActionsCompleted
+
+    $result = $object->ClearServerCertificateErrorActions(...);
+
+    # in handler class
+    sub ClearServerCertificateErrorActionsCompleted {
+        my ($self, $errorCode) = @_;
+
+        # handle the event here
+    }
+
+See L</ClearServerCertificateErrorActions>.
+
+Passes
+
+=over
+
+=item * $errorCode: L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+=back
+
+=head2 ClientCertificateRequested
+
+    $token = $object->add_ClientCertificateRequested($handler);
+    $result = $object->remove_ClientCertificateRequested($token);
+
+    # in handler class
+    sub ClientCertificateRequested {
+        my ($self, $sender, $args) = @_;
+
+        # handle the event here
+    }
+
+Passes
+
+=over
+
+=item * $sender: L<CoreWebView2> object
+
+=item * $args: L<CoreWebView2::ClientCertificateRequestedEventArgs> object
+
+=back
+
+=head2 ContainsFullScreenElementChanged
+
+    $token = $object->add_ContainsFullScreenElementChanged($handler);
+    $result = $object->remove_ContainsFullScreenElementChanged($token);
+
+    # in handler class
+    sub ContainsFullScreenElementChanged {
+        my ($self, $sender) = @_;
+
+        # handle the event here
+    }
+
+Passes
+
+=over
+
+=item * $sender: L<CoreWebView2> object
+
+=back
+
+=head2 ContentLoading
+
+    $token = $object->add_ContentLoading($handler);
+    $result = $object->remove_ContentLoading($token);
+
+    # in handler class
+    sub ContentLoading {
+        my ($self, $sender, $args) = @_;
+
+        # handle the event here
+    }
+
+Passes
+
+=over
+
+=item * $sender: L<CoreWebView2> object
+
+=item * $args: L<CoreWebView2::ContentLoadingEventArgs> object
+
+=back
+
+=head2 ContextMenuRequested
+
+    $token = $object->add_ContextMenuRequested($handler);
+    $result = $object->remove_ContextMenuRequested($token);
+
+    # in handler class
+    sub ContextMenuRequested {
+        my ($self, $sender, $args) = @_;
+
+        # handle the event here
+    }
+
+Passes
+
+=over
+
+=item * $sender: L<CoreWebView2> object
+
+=item * $args: L<CoreWebView2::ContextMenuRequestedEventArgs> object
+
+=back
+
+=head2 DOMContentLoaded
+
+    $token = $object->add_DOMContentLoaded($handler);
+    $result = $object->remove_DOMContentLoaded($token);
+
+    # in handler class
+    sub DOMContentLoaded {
+        my ($self, $sender, $args) = @_;
+
+        # handle the event here
+    }
+
+Passes
+
+=over
+
+=item * $sender: L<CoreWebView2> object
+
+=item * $args: L<CoreWebView2::DOMContentLoadedEventArgs> object
+
+=back
+
+=head2 DocumentTitleChanged
+
+    $token = $object->add_DocumentTitleChanged($handler);
+    $result = $object->remove_DocumentTitleChanged($token);
+
+    # in handler class
+    sub DocumentTitleChanged {
+        my ($self, $sender) = @_;
+
+        # handle the event here
+    }
+
+Passes
+
+=over
+
+=item * $sender: L<CoreWebView2> object
+
+=back
+
+=head2 DownloadStarting
+
+    $token = $object->add_DownloadStarting($handler);
+    $result = $object->remove_DownloadStarting($token);
+
+    # in handler class
+    sub DownloadStarting {
+        my ($self, $sender, $args) = @_;
+
+        # handle the event here
+    }
+
+Passes
+
+=over
+
+=item * $sender: L<CoreWebView2> object
+
+=item * $args: L<CoreWebView2::DownloadStartingEventArgs> object
+
+=back
+
+=head2 ExecuteScriptCompleted
+
+    $result = $object->ExecuteScript(...);
+
+    # in handler class
+    sub ExecuteScriptCompleted {
+        my ($self, $errorCode, $resultObjectAsJson) = @_;
+
+        # handle the event here
+    }
+
+See L</ExecuteScript>.
+
+Passes
+
+=over
+
+=item * $errorCode: L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+=item * $resultObjectAsJson: string
+
+=back
+
+=head2 FaviconChanged
+
+    $token = $object->add_FaviconChanged($handler);
+    $result = $object->remove_FaviconChanged($token);
+
+    # in handler class
+    sub FaviconChanged {
+        my ($self, $sender) = @_;
+
+        # handle the event here
+    }
+
+Passes
+
+=over
+
+=item * $sender: L<CoreWebView2> object
+
+=back
+
+=head2 FrameCreated
+
+    $token = $object->add_FrameCreated($handler);
+    $result = $object->remove_FrameCreated($token);
+
+    # in handler class
+    sub FrameCreated {
+        my ($self, $sender, $args) = @_;
+
+        # handle the event here
+    }
+
+Passes
+
+=over
+
+=item * $sender: L<CoreWebView2> object
+
+=item * $args: L<CoreWebView2::FrameCreatedEventArgs> object
+
+=back
+
+=head2 GetFaviconCompleted
+
+    $result = $object->GetFavicon(...);
+
+    # in handler class
+    sub GetFaviconCompleted {
+        my ($self, $errorCode, $faviconStream) = @_;
+
+        # handle the event here
+    }
+
+See L</GetFavicon>.
+
+Passes
+
+=over
+
+=item * $errorCode: L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+=item * $faviconStream: stream
+
+=back
+
+=head2 HistoryChanged
+
+    $token = $object->add_HistoryChanged($handler);
+    $result = $object->remove_HistoryChanged($token);
+
+    # in handler class
+    sub HistoryChanged {
+        my ($self, $sender) = @_;
+
+        # handle the event here
+    }
+
+Passes
+
+=over
+
+=item * $sender: L<CoreWebView2> object
+
+=back
+
+=head2 IsDefaultDownloadDialogOpenChanged
+
+    $token = $object->add_IsDefaultDownloadDialogOpenChanged($handler);
+    $result = $object->remove_IsDefaultDownloadDialogOpenChanged($token);
+
+    # in handler class
+    sub IsDefaultDownloadDialogOpenChanged {
+        my ($self, $sender) = @_;
+
+        # handle the event here
+    }
+
+Passes
+
+=over
+
+=item * $sender: L<CoreWebView2> object
+
+=back
+
+=head2 IsDocumentPlayingAudioChanged
+
+    $token = $object->add_IsDocumentPlayingAudioChanged($handler);
+    $result = $object->remove_IsDocumentPlayingAudioChanged($token);
+
+    # in handler class
+    sub IsDocumentPlayingAudioChanged {
+        my ($self, $sender) = @_;
+
+        # handle the event here
+    }
+
+Passes
+
+=over
+
+=item * $sender: L<CoreWebView2> object
+
+=back
+
+=head2 IsMutedChanged
+
+    $token = $object->add_IsMutedChanged($handler);
+    $result = $object->remove_IsMutedChanged($token);
+
+    # in handler class
+    sub IsMutedChanged {
+        my ($self, $sender) = @_;
+
+        # handle the event here
+    }
+
+Passes
+
+=over
+
+=item * $sender: L<CoreWebView2> object
+
+=back
+
+=head2 LaunchingExternalUriScheme
+
+    $token = $object->add_LaunchingExternalUriScheme($handler);
+    $result = $object->remove_LaunchingExternalUriScheme($token);
+
+    # in handler class
+    sub LaunchingExternalUriScheme {
+        my ($self, $sender, $args) = @_;
+
+        # handle the event here
+    }
+
+Passes
+
+=over
+
+=item * $sender: L<CoreWebView2> object
+
+=item * $args: L<CoreWebView2::LaunchingExternalUriSchemeEventArgs> object
+
+=back
+
+=head2 NavigationCompleted
+
+    $token = $object->add_FrameNavigationCompleted($handler);
+    $token = $object->add_NavigationCompleted($handler);
+    $result = $object->remove_FrameNavigationCompleted($token);
+    $result = $object->remove_NavigationCompleted($token);
+
+    # in handler class
+    sub NavigationCompleted {
+        my ($self, $sender, $args) = @_;
+
+        # handle the event here
+    }
+
+Passes
+
+=over
+
+=item * $sender: L<CoreWebView2> object
+
+=item * $args: L<CoreWebView2::NavigationCompletedEventArgs> object
+
+=back
+
+=head2 NavigationStarting
+
+    $token = $object->add_FrameNavigationStarting($handler);
+    $token = $object->add_NavigationStarting($handler);
+    $result = $object->remove_FrameNavigationStarting($token);
+    $result = $object->remove_NavigationStarting($token);
+
+    # in handler class
+    sub NavigationStarting {
+        my ($self, $sender, $args) = @_;
+
+        # handle the event here
+    }
+
+Passes
+
+=over
+
+=item * $sender: L<CoreWebView2> object
+
+=item * $args: L<CoreWebView2::NavigationStartingEventArgs> object
+
+=back
+
+=head2 NewWindowRequested
+
+    $token = $object->add_NewWindowRequested($handler);
+    $result = $object->remove_NewWindowRequested($token);
+
+    # in handler class
+    sub NewWindowRequested {
+        my ($self, $sender, $args) = @_;
+
+        # handle the event here
+    }
+
+Passes
+
+=over
+
+=item * $sender: L<CoreWebView2> object
+
+=item * $args: L<CoreWebView2::NewWindowRequestedEventArgs> object
+
+=back
+
+=head2 PermissionRequested
+
+    $token = $object->add_PermissionRequested($handler);
+    $result = $object->remove_PermissionRequested($token);
+
+    # in handler class
+    sub PermissionRequested {
+        my ($self, $sender, $args) = @_;
+
+        # handle the event here
+    }
+
+Passes
+
+=over
+
+=item * $sender: L<CoreWebView2> object
+
+=item * $args: L<CoreWebView2::PermissionRequestedEventArgs> object
+
+=back
+
+=head2 PrintCompleted
+
+    $result = $object->Print(...);
+
+    # in handler class
+    sub PrintCompleted {
+        my ($self, $errorCode, $printStatus) = @_;
+
+        # handle the event here
+    }
+
+See L</Print>.
+
+Passes
+
+=over
+
+=item * $errorCode: L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+=item * $printStatus: L<PRINT_STATUS|CoreWebView2::constants/PRINT_STATUS> constant
+
+=back
+
+=head2 PrintToPdfCompleted
+
+    $result = $object->PrintToPdf(...);
+
+    # in handler class
+    sub PrintToPdfCompleted {
+        my ($self, $errorCode, $isSuccessful) = @_;
+
+        # handle the event here
+    }
+
+See L</PrintToPdf>.
+
+Passes
+
+=over
+
+=item * $errorCode: L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+=item * $isSuccessful: boolean
+
+=back
+
+=head2 PrintToPdfStreamCompleted
+
+    $result = $object->PrintToPdfStream(...);
+
+    # in handler class
+    sub PrintToPdfStreamCompleted {
+        my ($self, $errorCode, $pdfStream) = @_;
+
+        # handle the event here
+    }
+
+See L</PrintToPdfStream>.
+
+Passes
+
+=over
+
+=item * $errorCode: L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+=item * $pdfStream: stream
+
+=back
+
+=head2 ProcessFailed
+
+    $token = $object->add_ProcessFailed($handler);
+    $result = $object->remove_ProcessFailed($token);
+
+    # in handler class
+    sub ProcessFailed {
+        my ($self, $sender, $args) = @_;
+
+        # handle the event here
+    }
+
+Passes
+
+=over
+
+=item * $sender: L<CoreWebView2> object
+
+=item * $args: L<CoreWebView2::ProcessFailedEventArgs> object
+
+=back
+
+=head2 ScriptDialogOpening
+
+    $token = $object->add_ScriptDialogOpening($handler);
+    $result = $object->remove_ScriptDialogOpening($token);
+
+    # in handler class
+    sub ScriptDialogOpening {
+        my ($self, $sender, $args) = @_;
+
+        # handle the event here
+    }
+
+Passes
+
+=over
+
+=item * $sender: L<CoreWebView2> object
+
+=item * $args: L<CoreWebView2::ScriptDialogOpeningEventArgs> object
+
+=back
+
+=head2 ServerCertificateErrorDetected
+
+    $token = $object->add_ServerCertificateErrorDetected($handler);
+    $result = $object->remove_ServerCertificateErrorDetected($token);
+
+    # in handler class
+    sub ServerCertificateErrorDetected {
+        my ($self, $sender, $args) = @_;
+
+        # handle the event here
+    }
+
+Passes
+
+=over
+
+=item * $sender: L<CoreWebView2> object
+
+=item * $args: L<CoreWebView2::ServerCertificateErrorDetectedEventArgs> object
+
+=back
+
+=head2 SourceChanged
+
+    $token = $object->add_SourceChanged($handler);
+    $result = $object->remove_SourceChanged($token);
+
+    # in handler class
+    sub SourceChanged {
+        my ($self, $sender, $args) = @_;
+
+        # handle the event here
+    }
+
+Passes
+
+=over
+
+=item * $sender: L<CoreWebView2> object
+
+=item * $args: L<CoreWebView2::SourceChangedEventArgs> object
+
+=back
+
+=head2 StatusBarTextChanged
+
+    $token = $object->add_StatusBarTextChanged($handler);
+    $result = $object->remove_StatusBarTextChanged($token);
+
+    # in handler class
+    sub StatusBarTextChanged {
+        my ($self, $sender) = @_;
+
+        # handle the event here
+    }
+
+Passes
+
+=over
+
+=item * $sender: L<CoreWebView2> object
+
+=back
+
+=head2 TrySuspendCompleted
+
+    $result = $object->TrySuspend(...);
+
+    # in handler class
+    sub TrySuspendCompleted {
+        my ($self, $errorCode, $isSuccessful) = @_;
+
+        # handle the event here
+    }
+
+See L</TrySuspend>.
+
+Passes
+
+=over
+
+=item * $errorCode: L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+=item * $isSuccessful: boolean
+
+=back
+
+=head2 WebMessageReceived
+
+    $token = $object->add_WebMessageReceived($handler);
+    $result = $object->remove_WebMessageReceived($token);
+
+    # in handler class
+    sub WebMessageReceived {
+        my ($self, $sender, $args) = @_;
+
+        # handle the event here
+    }
+
+Passes
+
+=over
+
+=item * $sender: L<CoreWebView2> object
+
+=item * $args: L<CoreWebView2::WebMessageReceivedEventArgs> object
+
+=back
+
+=head2 WebResourceRequested
+
+    $token = $object->add_WebResourceRequested($handler);
+    $result = $object->remove_WebResourceRequested($token);
+
+    # in handler class
+    sub WebResourceRequested {
+        my ($self, $sender, $args) = @_;
+
+        # handle the event here
+    }
+
+Passes
+
+=over
+
+=item * $sender: L<CoreWebView2> object
+
+=item * $args: L<CoreWebView2::WebResourceRequestedEventArgs> object
+
+=back
+
+=head2 WebResourceResponseReceived
+
+    $token = $object->add_WebResourceResponseReceived($handler);
+    $result = $object->remove_WebResourceResponseReceived($token);
+
+    # in handler class
+    sub WebResourceResponseReceived {
+        my ($self, $sender, $args) = @_;
+
+        # handle the event here
+    }
+
+Passes
+
+=over
+
+=item * $sender: L<CoreWebView2> object
+
+=item * $args: L<CoreWebView2::WebResourceResponseReceivedEventArgs> object
+
+=back
+
+=head2 WindowCloseRequested
+
+    $token = $object->add_WindowCloseRequested($handler);
+    $result = $object->remove_WindowCloseRequested($token);
+
+    # in handler class
+    sub WindowCloseRequested {
+        my ($self, $sender) = @_;
+
+        # handle the event here
+    }
+
+Passes
+
+=over
+
+=item * $sender: L<CoreWebView2> object
+
+=back
+
+=cut

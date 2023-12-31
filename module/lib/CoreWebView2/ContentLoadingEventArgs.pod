@@ -1,0 +1,39 @@
+=pod
+
+=head1 NAME
+
+CoreWebView2::ContentLoadingEventArgs
+
+=head1 VERSION
+
+0.001.000
+
+=head1 SYNOPSIS
+
+TBD
+
+=head1 DESCRIPTION
+
+TBD
+
+=head1 METHODS
+
+=head1 PROPERTIES
+
+=head2 IsErrorPage
+
+    $isErrorPage = $object->get_IsErrorPage();
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2contentloadingeventargs#get_iserrorpage>.
+
+=head2 NavigationId
+
+    $navigationId = $object->get_NavigationId();
+
+An unsigned integer.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2contentloadingeventargs#get_navigationid>.
+
+=cut

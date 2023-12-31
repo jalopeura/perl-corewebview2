@@ -1,0 +1,39 @@
+=pod
+
+=head1 NAME
+
+CoreWebView2::Widget::Standalone
+
+=head1 SYNOPSIS
+
+    use CoreWebView2::Widget::Standalone;
+
+    my $webview = CoreWebView2::Widget::Standalone->new(
+        uri => 'https://www.perl.com',
+        onNavigationStarting => sub {
+            # ...
+        },
+        onNavigationCompleted => sub {
+            # ...
+        },
+    );
+
+    $webview->run();
+
+=head1 DESCRIPTION
+
+This module allows for the creation of a Win32 API window with an existing Perl framework.
+
+=head2 METHODS
+
+In addition to the methods inherited from L<CoreWebView2::Widget>, C<CoreWebView2::Widget::Standalone> provides the following methods.
+
+=head2 run()
+
+Starts the window loop.
+
+=head2 quit()
+
+Ends the window loop.
+
+=cut

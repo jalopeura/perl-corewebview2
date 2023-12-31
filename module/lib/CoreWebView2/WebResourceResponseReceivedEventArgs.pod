@@ -1,0 +1,39 @@
+=pod
+
+=head1 NAME
+
+CoreWebView2::WebResourceResponseReceivedEventArgs
+
+=head1 VERSION
+
+0.001.000
+
+=head1 SYNOPSIS
+
+TBD
+
+=head1 DESCRIPTION
+
+TBD
+
+=head1 METHODS
+
+=head1 PROPERTIES
+
+=head2 Request
+
+    $request = $object->get_Request();
+
+A L<CoreWebView2::WebResourceRequest> object.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2webresourceresponsereceivedeventargs#get_request>.
+
+=head2 Response
+
+    $response = $object->get_Response();
+
+A L<CoreWebView2::WebResourceResponseView> object.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2webresourceresponsereceivedeventargs#get_response>.
+
+=cut

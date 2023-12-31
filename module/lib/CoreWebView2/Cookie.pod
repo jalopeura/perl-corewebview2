@@ -1,0 +1,100 @@
+=pod
+
+=head1 NAME
+
+CoreWebView2::Cookie
+
+=head1 VERSION
+
+0.001.000
+
+=head1 SYNOPSIS
+
+TBD
+
+=head1 DESCRIPTION
+
+TBD
+
+=head1 METHODS
+
+=head1 PROPERTIES
+
+=head2 Domain
+
+    $domain = $object->get_Domain();
+
+A string.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2cookie#get_domain>.
+
+=head2 Expires
+
+    $expires = $object->get_Expires();
+    $object->put_Expires($expires);
+
+A number.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2cookie#get_expires>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2cookie#put_expires>.
+
+=head2 IsHttpOnly
+
+    $isHttpOnly = $object->get_IsHttpOnly();
+    $object->put_IsHttpOnly($isHttpOnly);
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2cookie#get_ishttponly>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2cookie#put_ishttponly>.
+
+=head2 IsSecure
+
+    $isSecure = $object->get_IsSecure();
+    $object->put_IsSecure($isSecure);
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2cookie#get_issecure>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2cookie#put_issecure>.
+
+=head2 IsSession
+
+    $isSession = $object->get_IsSession();
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2cookie#get_issession>.
+
+=head2 Name
+
+    $name = $object->get_Name();
+
+A string.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2cookie#get_name>.
+
+=head2 Path
+
+    $path = $object->get_Path();
+
+A string.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2cookie#get_path>.
+
+=head2 SameSite
+
+    $sameSite = $object->get_SameSite();
+    $object->put_SameSite($sameSite);
+
+A L<COOKIE_SAME_SITE_KIND|CoreWebView2::constants/COOKIE_SAME_SITE_KIND> constant.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2cookie#get_samesite>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2cookie#put_samesite>.
+
+=head2 Value
+
+    $value = $object->get_Value();
+    $object->put_Value($value);
+
+A string.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2cookie#get_value>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2cookie#put_value>.
+
+=cut

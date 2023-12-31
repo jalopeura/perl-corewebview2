@@ -1,0 +1,119 @@
+=pod
+
+=head1 NAME
+
+CoreWebView2::ContextMenuItem
+
+=head1 VERSION
+
+0.001.000
+
+=head1 SYNOPSIS
+
+TBD
+
+=head1 DESCRIPTION
+
+TBD
+
+=head1 METHODS
+
+=head1 PROPERTIES
+
+=head2 Children
+
+    $value = $object->get_Children();
+
+A L<CoreWebView2::ContextMenuItemCollection> object.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2contextmenuitem#get_children>.
+
+=head2 CommandId
+
+    $value = $object->get_CommandId();
+
+An integer.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2contextmenuitem#get_commandid>.
+
+=head2 Icon
+
+    $value = $object->get_Icon();
+
+A stream.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2contextmenuitem#get_icon>.
+
+=head2 IsChecked
+
+    $value = $object->get_IsChecked();
+    $object->put_IsChecked($value);
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2contextmenuitem#get_ischecked>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2contextmenuitem#put_ischecked>.
+
+=head2 IsEnabled
+
+    $value = $object->get_IsEnabled();
+    $object->put_IsEnabled($value);
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2contextmenuitem#get_isenabled>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2contextmenuitem#put_isenabled>.
+
+=head2 Kind
+
+    $value = $object->get_Kind();
+
+A L<CONTEXT_MENU_ITEM_KIND|CoreWebView2::constants/CONTEXT_MENU_ITEM_KIND> constant.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2contextmenuitem#get_kind>.
+
+=head2 Label
+
+    $value = $object->get_Label();
+
+A string.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2contextmenuitem#get_label>.
+
+=head2 Name
+
+    $value = $object->get_Name();
+
+A string.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2contextmenuitem#get_name>.
+
+=head2 ShortcutKeyDescription
+
+    $value = $object->get_ShortcutKeyDescription();
+
+A string.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2contextmenuitem#get_shortcutkeydescription>.
+
+=head1 EVENTS
+
+=head2 CustomItemSelected
+
+    $token = $object->add_CustomItemSelected($handler);
+    $result = $object->remove_CustomItemSelected($token);
+
+    # in handler class
+    sub CustomItemSelected {
+        my ($self, $sender) = @_;
+
+        # handle the event here
+    }
+
+Passes
+
+=over
+
+=item * $sender: L<CoreWebView2::ContextMenuItem> object
+
+=back
+
+=cut

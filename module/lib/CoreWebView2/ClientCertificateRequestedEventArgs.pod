@@ -1,0 +1,98 @@
+=pod
+
+=head1 NAME
+
+CoreWebView2::ClientCertificateRequestedEventArgs
+
+=head1 VERSION
+
+0.001.000
+
+=head1 SYNOPSIS
+
+TBD
+
+=head1 DESCRIPTION
+
+TBD
+
+=head1 METHODS
+
+=head2 GetDeferral
+
+    $deferral = $object->GetDeferral();
+
+Returns a L<CoreWebView2::Deferral> object
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2clientcertificaterequestedeventargs#getdeferral>.
+
+=head1 PROPERTIES
+
+=head2 AllowedCertificateAuthorities
+
+    $value = $object->get_AllowedCertificateAuthorities();
+
+A L<CoreWebView2::StringCollection> object.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2clientcertificaterequestedeventargs#get_allowedcertificateauthorities>.
+
+=head2 Cancel
+
+    $value = $object->get_Cancel();
+    $object->put_Cancel($value);
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2clientcertificaterequestedeventargs#get_cancel>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2clientcertificaterequestedeventargs#put_cancel>.
+
+=head2 Handled
+
+    $value = $object->get_Handled();
+    $object->put_Handled($value);
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2clientcertificaterequestedeventargs#get_handled>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2clientcertificaterequestedeventargs#put_handled>.
+
+=head2 Host
+
+    $value = $object->get_Host();
+
+A string.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2clientcertificaterequestedeventargs#get_host>.
+
+=head2 IsProxy
+
+    $value = $object->get_IsProxy();
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2clientcertificaterequestedeventargs#get_isproxy>.
+
+=head2 MutuallyTrustedCertificates
+
+    $value = $object->get_MutuallyTrustedCertificates();
+
+A L<CoreWebView2::ClientCertificateCollection> object.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2clientcertificaterequestedeventargs#get_mutuallytrustedcertificates>.
+
+=head2 Port
+
+    $value = $object->get_Port();
+
+An integer.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2clientcertificaterequestedeventargs#get_port>.
+
+=head2 SelectedCertificate
+
+    $value = $object->get_SelectedCertificate();
+    $object->put_SelectedCertificate($value);
+
+A L<CoreWebView2::ClientCertificate> object.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2clientcertificaterequestedeventargs#get_selectedcertificate>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2clientcertificaterequestedeventargs#put_selectedcertificate>.
+
+=cut

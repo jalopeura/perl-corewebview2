@@ -1,0 +1,55 @@
+=pod
+
+=head1 NAME
+
+CoreWebView2::NavigationCompletedEventArgs
+
+=head1 VERSION
+
+0.001.000
+
+=head1 SYNOPSIS
+
+TBD
+
+=head1 DESCRIPTION
+
+TBD
+
+=head1 METHODS
+
+=head1 PROPERTIES
+
+=head2 HttpStatusCode
+
+    $http_status_code = $object->get_HttpStatusCode();
+
+An integer.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2navigationcompletedeventargs2#get_httpstatuscode>.
+
+=head2 IsSuccess
+
+    $isSuccess = $object->get_IsSuccess();
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2navigationcompletedeventargs#get_issuccess>.
+
+=head2 NavigationId
+
+    $navigationId = $object->get_NavigationId();
+
+An unsigned integer.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2navigationcompletedeventargs#get_navigationid>.
+
+=head2 WebErrorStatus
+
+    $webErrorStatus = $object->get_WebErrorStatus();
+
+A L<WEB_ERROR_STATUS|CoreWebView2::constants/WEB_ERROR_STATUS> constant.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2navigationcompletedeventargs#get_weberrorstatus>.
+
+=cut

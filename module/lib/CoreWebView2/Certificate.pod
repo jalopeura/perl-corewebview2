@@ -1,0 +1,87 @@
+=pod
+
+=head1 NAME
+
+CoreWebView2::Certificate
+
+=head1 VERSION
+
+0.001.000
+
+=head1 SYNOPSIS
+
+TBD
+
+=head1 DESCRIPTION
+
+TBD
+
+=head1 METHODS
+
+=head2 ToPemEncoding
+
+    $pemEncodedData = $object->ToPemEncoding();
+
+Returns a string
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2certificate#topemencoding>.
+
+=head1 PROPERTIES
+
+=head2 DerEncodedSerialNumber
+
+    $value = $object->get_DerEncodedSerialNumber();
+
+A string.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2certificate#get_derencodedserialnumber>.
+
+=head2 DisplayName
+
+    $value = $object->get_DisplayName();
+
+A string.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2certificate#get_displayname>.
+
+=head2 Issuer
+
+    $value = $object->get_Issuer();
+
+A string.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2certificate#get_issuer>.
+
+=head2 PemEncodedIssuerCertificateChain
+
+    $value = $object->get_PemEncodedIssuerCertificateChain();
+
+A L<CoreWebView2::StringCollection> object.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2certificate#get_pemencodedissuercertificatechain>.
+
+=head2 Subject
+
+    $value = $object->get_Subject();
+
+A string.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2certificate#get_subject>.
+
+=head2 ValidFrom
+
+    $value = $object->get_ValidFrom();
+
+A number.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2certificate#get_validfrom>.
+
+=head2 ValidTo
+
+    $value = $object->get_ValidTo();
+
+A number.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2certificate#get_validto>.
+
+=cut

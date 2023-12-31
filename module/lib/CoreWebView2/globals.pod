@@ -1,0 +1,123 @@
+=pod
+
+=head1 NAME
+
+CoreWebView2 Globals
+
+=head1 VERSION
+
+0.001.000
+
+=head1 SYNOPSIS
+
+TBD
+
+=head1 DESCRIPTION
+
+TBD
+
+=head1 FUNCTIONS
+
+=head2 CompareBrowserVersions
+
+    $result = CompareBrowserVersions($version1, $version2);
+
+Takes
+
+=over
+
+=item * $version1: string
+
+=item * $version2: string
+
+=back
+
+Returns an integer
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/webview2-idl#comparebrowserversions>.
+
+=head2 CreateCoreWebView2Environment
+
+    $result = CreateCoreWebView2Environment($environmentCreatedHandler);
+
+Takes
+
+=over
+
+=item * $environmentCreatedHandler: event handler object
+
+=back
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+Triggers L</CreateCoreWebView2EnvironmentCompleted>
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/webview2-idl#createcorewebview2environment>.
+
+=head2 CreateCoreWebView2EnvironmentWithOptions
+
+    $result = CreateCoreWebView2EnvironmentWithOptions($browserExecutableFolder, $userDataFolder, $environmentOptions, $environmentCreatedHandler);
+
+Takes
+
+=over
+
+=item * $browserExecutableFolder: string
+
+=item * $userDataFolder: string
+
+=item * $environmentOptions: L<CoreWebView2::EnvironmentOptions> object
+
+=item * $environmentCreatedHandler: event handler object
+
+=back
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+Triggers L</CreateCoreWebView2EnvironmentCompleted>
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/webview2-idl#createcorewebview2environmentwithoptions>.
+
+=head2 GetAvailableCoreWebView2BrowserVersionString
+
+    $versionInfo = GetAvailableCoreWebView2BrowserVersionString($browserExecutableFolder);
+
+Takes
+
+=over
+
+=item * $browserExecutableFolder: string
+
+=back
+
+Returns a string
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/webview2-idl#getavailablecorewebview2browserversionstring>.
+
+=head1 EVENTS
+
+=head2 CreateCoreWebView2EnvironmentCompleted
+
+    $result = $object->CreateCoreWebView2Environment(...);
+    $result = $object->CreateCoreWebView2EnvironmentWithOptions(...);
+
+    # in handler class
+    sub CreateCoreWebView2EnvironmentCompleted {
+        my ($self, $errorCode, $createdEnvironment) = @_;
+
+        # handle the event here
+    }
+
+See L</CreateCoreWebView2Environment>, L</CreateCoreWebView2EnvironmentWithOptions>.
+
+Passes
+
+=over
+
+=item * $errorCode: L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+=item * $createdEnvironment: L<CoreWebView2::Environment> object
+
+=back
+
+=cut

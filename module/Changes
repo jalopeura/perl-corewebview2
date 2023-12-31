@@ -1,0 +1,6 @@
+Revision history for Perl extension Win32::GUI::WebView2.
+
+0.01  Thu Mar 10 15:08:00 2022
+	- original version; created by h2xs 1.23 with options
+		--use-new-tests -n Win32::GUI::WebView2
+

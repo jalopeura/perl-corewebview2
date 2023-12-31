@@ -1,0 +1,349 @@
+# $Id: TYPEMAP,v 1.10 2007/07/15 18:56:25 robertemay Exp $
+TYPEMAP
+
+DWORD								T_UV
+LCID								T_UV
+UINT								T_UV
+UINT32								T_UV
+UINT64								T_UV
+ULONG								T_UV
+WORD								T_UV
+
+# pointer types
+BYTE*								T_UV
+# BYTE* used in SharedBuffer::get_Buffer - might need to rethink this
+
+# handle types
+HANDLE								T_UV
+HWND								T_UV
+HCURSOR								T_UV
+
+DISPID								T_IV
+HRESULT								T_IV
+INT									T_IV
+INT32								T_IV
+INT64								T_IV
+
+BOOL								T_BOOL
+
+PCWSTR								T_WCHAR
+LPWSTR								T_WCHAR
+LPCWSTR								T_WCHAR
+
+LARGE_INTEGER						T_IQUAD
+ULARGE_INTEGER						T_UQUAD
+
+COREWEBVIEW2_COLOR					T_COLOR
+COREWEBVIEW2_PHYSICAL_KEY_STATUS	T_KEY_STATUS
+EventRegistrationToken				T_TOKEN
+POINT								T_POINT
+RECT								T_RECT
+VARIANT*							T_VARIANT
+
+#
+# custom interfaces
+#
+ICoreWebView2EnvironmentOptions*				T_ENVOPTS
+ICoreWebView2EnvironmentOptions2*				T_ENVOPTS
+ICoreWebView2EnvironmentOptions3*				T_ENVOPTS
+ICoreWebView2EnvironmentOptions4*				T_ENVOPTS
+ICoreWebView2EnvironmentOptions5*				T_ENVOPTS
+ICoreWebView2EnvironmentOptions6*				T_ENVOPTS
+
+ICoreWebView2CustomSchemeRegistration*			T_SCHEME
+
+IStream*										T_STREAM
+IDispatch*										T_IFACE
+
+# not fully supported
+IDataObject*						T_UV
+IUnknown*							T_UV
+
+#
+# standard interfaces
+#
+ICoreWebView2*									T_IFACE
+ICoreWebView2_20*								T_IFACE
+ICoreWebView2BasicAuthenticationResponse*		T_IFACE
+ICoreWebView2BrowserExtension*					T_IFACE
+ICoreWebView2BrowserExtensionList*				T_IFACE
+ICoreWebView2Certificate*						T_IFACE
+ICoreWebView2ClientCertificate*					T_IFACE
+ICoreWebView2ClientCertificateCollection*		T_IFACE
+ICoreWebView2CompositionController3*			T_IFACE
+ICoreWebView2ContextMenuItem*					T_IFACE
+ICoreWebView2Controller4*						T_IFACE
+ICoreWebView2ControllerOptions*					T_IFACE
+ICoreWebView2ControllerOptions2*				T_IFACE
+ICoreWebView2Cookie*							T_IFACE
+ICoreWebView2CookieList*						T_IFACE
+ICoreWebView2CookieManager*						T_IFACE
+ICoreWebView2ContextMenuItemCollection*			T_IFACE
+ICoreWebView2ContextMenuTarget*					T_IFACE
+ICoreWebView2Deferral*							T_IFACE
+ICoreWebView2DevToolsProtocolEventReceiver*		T_IFACE
+ICoreWebView2DownloadOperation*					T_IFACE
+ICoreWebView2Environment*						T_IFACE
+ICoreWebView2Environment13*						T_IFACE
+ICoreWebView2File*								T_IFACE
+ICoreWebView2Frame*								T_IFACE
+ICoreWebView2Frame5*							T_IFACE
+ICoreWebView2FrameInfo*							T_IFACE
+ICoreWebView2FrameInfo2*						T_IFACE
+ICoreWebView2FrameInfoCollection*				T_IFACE
+ICoreWebView2FrameInfoCollectionIterator*		T_IFACE
+ICoreWebView2HttpHeadersCollectionIterator*		T_IFACE
+ICoreWebView2HttpRequestHeaders*				T_IFACE
+ICoreWebView2HttpResponseHeaders*				T_IFACE
+ICoreWebView2ObjectCollectionView*				T_IFACE
+ICoreWebView2PermissionSetting*					T_IFACE
+ICoreWebView2PermissionSettingCollectionView*	T_IFACE
+ICoreWebView2PointerInfo*						T_IFACE
+ICoreWebView2PrintSettings*						T_IFACE
+ICoreWebView2PrintSettings2*					T_IFACE
+ICoreWebView2ProcessExtendedInfo*				T_IFACE
+ICoreWebView2ProcessExtendedInfoCollection*		T_IFACE
+ICoreWebView2ProcessInfo*						T_IFACE
+ICoreWebView2ProcessInfoCollection*				T_IFACE
+ICoreWebView2Profile*							T_IFACE
+ICoreWebView2Profile8*							T_IFACE
+ICoreWebView2Settings*							T_IFACE
+ICoreWebView2Settings8*							T_IFACE
+ICoreWebView2SharedBuffer*						T_IFACE
+ICoreWebView2StringCollection*					T_IFACE
+ICoreWebView2WebResourceRequest*				T_IFACE
+ICoreWebView2WebResourceResponse*				T_IFACE
+ICoreWebView2WebResourceResponseView*			T_IFACE
+ICoreWebView2WindowFeatures*					T_IFACE
+
+#
+# event arg interfaces
+#
+ICoreWebView2AcceleratorKeyPressedEventArgs2*			T_IFACE
+ICoreWebView2BasicAuthenticationRequestedEventArgs*		T_IFACE
+ICoreWebView2BrowserProcessExitedEventArgs*				T_IFACE
+ICoreWebView2ClientCertificateRequestedEventArgs*		T_IFACE
+ICoreWebView2ContentLoadingEventArgs*					T_IFACE
+ICoreWebView2ContextMenuRequestedEventArgs*				T_IFACE
+ICoreWebView2DOMContentLoadedEventArgs*					T_IFACE
+ICoreWebView2DevToolsProtocolEventReceivedEventArgs2*	T_IFACE
+ICoreWebView2DownloadStartingEventArgs*					T_IFACE
+ICoreWebView2FrameCreatedEventArgs*						T_IFACE
+ICoreWebView2LaunchingExternalUriSchemeEventArgs*		T_IFACE
+ICoreWebView2MoveFocusRequestedEventArgs*				T_IFACE
+ICoreWebView2NavigationCompletedEventArgs2*				T_IFACE
+ICoreWebView2NavigationStartingEventArgs3*				T_IFACE
+ICoreWebView2NewWindowRequestedEventArgs3*				T_IFACE
+ICoreWebView2PermissionRequestedEventArgs3*				T_IFACE
+ICoreWebView2ProcessFailedEventArgs2*					T_IFACE
+ICoreWebView2ScriptDialogOpeningEventArgs*				T_IFACE
+ICoreWebView2ServerCertificateErrorDetectedEventArgs*	T_IFACE
+ICoreWebView2SourceChangedEventArgs*					T_IFACE
+ICoreWebView2WebMessageReceivedEventArgs2*				T_IFACE
+ICoreWebView2WebResourceRequestedEventArgs*				T_IFACE
+ICoreWebView2WebResourceResponseReceivedEventArgs*		T_IFACE
+
+#
+# event handler interfaces
+#
+ICoreWebView2AcceleratorKeyPressedEventHandler*							T_HANDLER
+ICoreWebView2AddScriptToExecuteOnDocumentCreatedCompletedHandler*		T_HANDLER
+ICoreWebView2BasicAuthenticationRequestedEventHandler*					T_HANDLER
+ICoreWebView2BrowserExtensionEnableCompletedHandler*					T_HANDLER
+ICoreWebView2BrowserExtensionRemoveCompletedHandler*					T_HANDLER
+ICoreWebView2BrowserProcessExitedEventHandler*							T_HANDLER
+ICoreWebView2BytesReceivedChangedEventHandler*							T_HANDLER
+ICoreWebView2CallDevToolsProtocolMethodCompletedHandler*				T_HANDLER
+ICoreWebView2CapturePreviewCompletedHandler*							T_HANDLER
+ICoreWebView2ClearBrowsingDataCompletedHandler*							T_HANDLER
+ICoreWebView2ClearServerCertificateErrorActionsCompletedHandler*		T_HANDLER
+ICoreWebView2ClientCertificateRequestedEventHandler*					T_HANDLER
+ICoreWebView2ContainsFullScreenElementChangedEventHandler*				T_HANDLER
+ICoreWebView2ContentLoadingEventHandler*								T_HANDLER
+ICoreWebView2ContextMenuRequestedEventHandler*							T_HANDLER
+ICoreWebView2CreateCoreWebView2CompositionControllerCompletedHandler*	T_HANDLER
+ICoreWebView2CreateCoreWebView2ControllerCompletedHandler*				T_HANDLER
+ICoreWebView2CreateCoreWebView2EnvironmentCompletedHandler*				T_HANDLER
+ICoreWebView2CursorChangedEventHandler*									T_HANDLER
+ICoreWebView2CustomItemSelectedEventHandler*							T_HANDLER
+ICoreWebView2DevToolsProtocolEventReceivedEventHandler*					T_HANDLER
+ICoreWebView2DocumentTitleChangedEventHandler*							T_HANDLER
+ICoreWebView2DOMContentLoadedEventHandler*								T_HANDLER
+ICoreWebView2DownloadStartingEventHandler*								T_HANDLER
+ICoreWebView2EstimatedEndTimeChangedEventHandler*						T_HANDLER
+ICoreWebView2ExecuteScriptCompletedHandler*								T_HANDLER
+ICoreWebView2FaviconChangedEventHandler*								T_HANDLER
+ICoreWebView2FocusChangedEventHandler*									T_HANDLER
+ICoreWebView2FrameContentLoadingEventHandler*							T_HANDLER
+ICoreWebView2FrameCreatedEventHandler*									T_HANDLER
+ICoreWebView2FrameDestroyedEventHandler*								T_HANDLER
+ICoreWebView2FrameDOMContentLoadedEventHandler*							T_HANDLER
+ICoreWebView2FrameNameChangedEventHandler*								T_HANDLER
+ICoreWebView2FrameNavigationCompletedEventHandler*						T_HANDLER
+ICoreWebView2FrameNavigationStartingEventHandler*						T_HANDLER
+ICoreWebView2FramePermissionRequestedEventHandler*						T_HANDLER
+ICoreWebView2FrameWebMessageReceivedEventHandler*						T_HANDLER
+ICoreWebView2GetCookiesCompletedHandler*								T_HANDLER
+ICoreWebView2GetFaviconCompletedHandler*								T_HANDLER
+ICoreWebView2GetNonDefaultPermissionSettingsCompletedHandler*			T_HANDLER
+ICoreWebView2GetProcessExtendedInfosCompletedHandler*					T_HANDLER
+ICoreWebView2HistoryChangedEventHandler*								T_HANDLER
+ICoreWebView2IsDefaultDownloadDialogOpenChangedEventHandler*			T_HANDLER
+ICoreWebView2IsDocumentPlayingAudioChangedEventHandler*					T_HANDLER
+ICoreWebView2IsMutedChangedEventHandler*								T_HANDLER
+ICoreWebView2LaunchingExternalUriSchemeEventHandler*					T_HANDLER
+ICoreWebView2MoveFocusRequestedEventHandler*							T_HANDLER
+ICoreWebView2NavigationCompletedEventHandler*							T_HANDLER
+ICoreWebView2NavigationStartingEventHandler*							T_HANDLER
+ICoreWebView2NewBrowserVersionAvailableEventHandler*					T_HANDLER
+ICoreWebView2NewWindowRequestedEventHandler*							T_HANDLER
+ICoreWebView2PermissionRequestedEventHandler*							T_HANDLER
+ICoreWebView2PrintCompletedHandler*										T_HANDLER
+ICoreWebView2PrintToPdfCompletedHandler*								T_HANDLER
+ICoreWebView2PrintToPdfStreamCompletedHandler*							T_HANDLER
+ICoreWebView2ProcessFailedEventHandler*									T_HANDLER
+ICoreWebView2ProcessInfosChangedEventHandler*							T_HANDLER
+ICoreWebView2ProfileAddBrowserExtensionCompletedHandler*				T_HANDLER
+ICoreWebView2ProfileDeletedEventHandler*								T_HANDLER
+ICoreWebView2ProfileGetBrowserExtensionsCompletedHandler*				T_HANDLER
+ICoreWebView2RasterizationScaleChangedEventHandler*						T_HANDLER
+ICoreWebView2ScriptDialogOpeningEventHandler*							T_HANDLER
+ICoreWebView2ServerCertificateErrorDetectedEventHandler*				T_HANDLER
+ICoreWebView2SetPermissionStateCompletedHandler*						T_HANDLER
+ICoreWebView2SourceChangedEventHandler*									T_HANDLER
+ICoreWebView2StateChangedEventHandler*									T_HANDLER
+ICoreWebView2StatusBarTextChangedEventHandler*							T_HANDLER
+ICoreWebView2TrySuspendCompletedHandler*								T_HANDLER
+ICoreWebView2WebMessageReceivedEventHandler*							T_HANDLER
+ICoreWebView2WebResourceRequestedEventHandler*							T_HANDLER
+ICoreWebView2WebResourceResponseReceivedEventHandler*					T_HANDLER
+ICoreWebView2WebResourceResponseViewGetContentCompletedHandler*			T_HANDLER
+ICoreWebView2WindowCloseRequestedEventHandler*							T_HANDLER
+ICoreWebView2ZoomFactorChangedEventHandler*								T_HANDLER
+
+COREWEBVIEW2_BOUNDS_MODE								T_ENUM
+COREWEBVIEW2_BROWSER_PROCESS_EXIT_KIND					T_ENUM
+COREWEBVIEW2_BROWSING_DATA_KINDS						T_ENUM
+COREWEBVIEW2_CAPTURE_PREVIEW_IMAGE_FORMAT				T_ENUM
+COREWEBVIEW2_CLIENT_CERTIFICATE_KIND					T_ENUM
+COREWEBVIEW2_CONTEXT_MENU_ITEM_KIND						T_ENUM
+COREWEBVIEW2_CONTEXT_MENU_TARGET_KIND					T_ENUM
+COREWEBVIEW2_COOKIE_SAME_SITE_KIND						T_ENUM
+COREWEBVIEW2_DEFAULT_DOWNLOAD_DIALOG_CORNER_ALIGNMENT	T_ENUM
+COREWEBVIEW2_DOWNLOAD_INTERRUPT_REASON					T_ENUM
+COREWEBVIEW2_DOWNLOAD_STATE								T_ENUM
+COREWEBVIEW2_FAVICON_IMAGE_FORMAT						T_ENUM
+COREWEBVIEW2_FRAME_KIND									T_ENUM
+COREWEBVIEW2_HOST_RESOURCE_ACCESS_KIND					T_ENUM
+COREWEBVIEW2_KEY_EVENT_KIND								T_ENUM
+COREWEBVIEW2_MEMORY_USAGE_TARGET_LEVEL					T_ENUM
+COREWEBVIEW2_MOUSE_EVENT_KIND							T_ENUM
+COREWEBVIEW2_MOUSE_EVENT_VIRTUAL_KEYS					T_ENUM
+COREWEBVIEW2_MOVE_FOCUS_REASON							T_ENUM
+COREWEBVIEW2_NAVIGATION_KIND							T_ENUM
+COREWEBVIEW2_PDF_TOOLBAR_ITEMS							T_ENUM
+COREWEBVIEW2_PERMISSION_KIND							T_ENUM
+COREWEBVIEW2_PERMISSION_STATE							T_ENUM
+COREWEBVIEW2_POINTER_EVENT_KIND							T_ENUM
+COREWEBVIEW2_PRINT_COLLATION							T_ENUM
+COREWEBVIEW2_PRINT_COLOR_MODE							T_ENUM
+COREWEBVIEW2_PRINT_DIALOG_KIND							T_ENUM
+COREWEBVIEW2_PRINT_DUPLEX								T_ENUM
+COREWEBVIEW2_PRINT_MEDIA_SIZE							T_ENUM
+COREWEBVIEW2_PRINT_ORIENTATION							T_ENUM
+COREWEBVIEW2_PRINT_STATUS								T_ENUM
+COREWEBVIEW2_PREFERRED_COLOR_SCHEME						T_ENUM
+COREWEBVIEW2_PROCESS_FAILED_KIND						T_ENUM
+COREWEBVIEW2_PROCESS_FAILED_REASON						T_ENUM
+COREWEBVIEW2_PROCESS_KIND								T_ENUM
+COREWEBVIEW2_SCRIPT_DIALOG_KIND							T_ENUM
+COREWEBVIEW2_SERVER_CERTIFICATE_ERROR_ACTION			T_ENUM
+COREWEBVIEW2_SHARED_BUFFER_ACCESS						T_ENUM
+COREWEBVIEW2_SCRIPT_DIALOG_KIND							T_ENUM
+COREWEBVIEW2_TRACKING_PREVENTION_LEVEL					T_ENUM
+COREWEBVIEW2_WEB_ERROR_STATUS							T_ENUM
+COREWEBVIEW2_WEB_RESOURCE_CONTEXT						T_ENUM
+
+################################################################################
+INPUT
+T_ENVOPTS
+	$var = ($type)get_environment_options($arg, IID_${(my $t = $type)=~s/\s*\*$//; \$t});
+	//$var = ($type)get_environment_options($arg, ${ my $t = ($type=~/(ICoreWebView2EnvironmentOptions)(\d+)?\b/ ? $2 || 1 : 0); \$t });
+T_SCHEME
+	$var = ($type)get_custom_registration($arg, IID_${(my $t = $type)=~s/\s*\*$//; \$t});
+T_STREAM
+	$var = scalar_to_stream($arg);
+T_IFACE
+	$var = ($type)get_cpp_object($arg);
+T_HANDLER
+	//$var = new ${(my $t = $type)=~s/\*$//; \$t}($arg);
+	// HANDLER is the wrapper object, $var is the interface
+	HandlerBase* HANDLER = (HandlerBase*)new ${(my $t = $type)=~s/ICoreWebView2//; $t=~s/\*$//; \$t}($arg);
+	//SvREFCNT_inc($arg);
+	$var = ($type)HANDLER->GetInterface(IID_${(my $t = $type)=~s/\s*\*$//; \$t});
+
+T_WCHAR
+	std::wstring $var\_str = scalar_to_wstring($arg);
+	// $var\_str will last long enough for c_str() to be passed to the C function inside the XS function
+	// but when the XS function exits, it will go out of scope without needing to be manually freed
+	$var = $var\_str.c_str();
+T_IQUAD
+	$var.QuadPart = SvIV($arg);
+T_UQUAD
+	$var.QuadPart = SvUV($arg);
+
+T_COLOR
+	$var = aref_to_color($arg);
+T_KEY_STATUS
+	$var = href_to_key_status($arg);
+T_TOKEN
+	$var.value = SvUV($arg);
+T_POINT
+	$var = aref_to_point($arg);
+T_RECT
+	$var = href_to_rect($arg);
+T_VARIANT
+	VARIANT $var\_vt = scalar_to_variant($arg);
+	$var = &$var\_vt;
+
+OOPS
+	// TODO: fix me!
+
+################################################################################
+
+OUTPUT
+T_STREAM
+	$arg = stream_to_scalar($var);
+T_IFACE
+	create_perl_object($arg, $var, \"${(my $t = $type)=~s/\s+\*+$//; $t=~s/^ICoreWebView2(.+?)/CoreWebView2::$1/; $t=~s/^I//; \$t}\");
+
+T_WCHAR
+	$arg = wchar_to_scalar($var);
+	// strings coming out of CoreWebView2 need to be freed with CoTaskMemFree
+	CoTaskMemFree($var);
+T_IQUAD
+	$arg = newSViv($var.QuadPart);
+T_UQUAD
+	$arg = newSVuv($var.QuadPart);
+
+T_COLOR
+	$arg = color_to_aref($var);
+T_KEY_STATUS
+	$arg = key_status_to_href($var);
+T_TOKEN
+	// EventRegistrationToken is only ever returned from an interface method that adds a handler,
+	// so we can safely expect HANDLER to be created
+	if (! HANDLER->RegisterToken($var)) {
+		croak("Event token already set in $type");
+	}
+	// we return the value from inside the token
+	sv_setuv($arg, $var.value);
+T_POINT
+	$arg = point_to_aref($var);
+T_RECT
+	$arg = rect_to_href($var);
+T_VARIANT
+	$arg = variant_to_scalar(*$var);
+
+OOPS
+	// TODO: fix me!

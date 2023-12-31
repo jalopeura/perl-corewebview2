@@ -1,0 +1,47 @@
+=pod
+
+=head1 NAME
+
+CoreWebView2::StringCollection
+
+=head1 VERSION
+
+0.001.000
+
+=head1 SYNOPSIS
+
+TBD
+
+=head1 DESCRIPTION
+
+TBD
+
+=head1 METHODS
+
+=head2 GetValueAtIndex
+
+    $value = $object->GetValueAtIndex($index);
+
+Takes
+
+=over
+
+=item * $index: unsigned integer
+
+=back
+
+Returns a string
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2stringcollection#getvalueatindex>.
+
+=head1 PROPERTIES
+
+=head2 Count
+
+    $value = $object->get_Count();
+
+An unsigned integer.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2stringcollection#get_count>.
+
+=cut

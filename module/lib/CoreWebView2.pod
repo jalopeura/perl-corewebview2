@@ -1,0 +1,254 @@
+=pod
+
+=head1 NAME
+
+CoreWebView2
+
+=head1 VERSION
+
+1.0.2210.55.1
+
+=head1 SYNOPSIS
+
+    use CoreWebView2;
+
+    my $handler = new Handler;
+
+    CoreWebView2::CreateCoreWebView2Environment($handler);
+
+    package Handler;
+
+    sub new {
+        my ($class) = @_;
+        return bless {}, $class;
+    }
+
+    sub CreateCoreWebView2EnvironmentCompleted {
+        my ($self, $result, $environment) = @_;
+
+        my $hwnd;
+
+        # here fill in $hwnd with a window handle
+
+        $environment->CreateCoreWebView2Controller($hwnd, $self);
+    }
+
+    sub CreateCoreWebView2ControllerCompleted {
+        my ($self, $result, $controller) = @_;
+
+        my $webview = $controller->get_CoreWebView2();
+
+        $webview->Navigate('https://www.perl.com');
+    }
+
+You will probably want to use L<Widget|CoreWebView2::Widget> instead of the bare bones approach above.
+
+=head1 DESCRIPTION
+
+TBD
+
+=head1 PACKAGES
+
+=over
+
+=item L<Widget|CoreWebView2::Widget>
+
+=item L<constants|CoreWebView2::constants>
+
+=item L<globals|CoreWebView2::globals>
+
+=item L<BasicAuthenticationResponse|CoreWebView2::BasicAuthenticationResponse>
+
+=item L<BrowserExtension|CoreWebView2::BrowserExtension>
+
+=item L<BrowserExtensionList|CoreWebView2::BrowserExtensionList>
+
+=item L<Certificate|CoreWebView2::Certificate>
+
+=item L<ClientCertificate|CoreWebView2::ClientCertificate>
+
+=item L<ClientCertificateCollection|CoreWebView2::ClientCertificateCollection>
+
+=item L<CompositionController|CoreWebView2::CompositionController>
+
+=item L<ContextMenuItem|CoreWebView2::ContextMenuItem>
+
+=item L<ContextMenuItemCollection|CoreWebView2::ContextMenuItemCollection>
+
+=item L<ContextMenuTarget|CoreWebView2::ContextMenuTarget>
+
+=item L<Controller|CoreWebView2::Controller>
+
+=item L<ControllerOptions|CoreWebView2::ControllerOptions>
+
+=item L<Cookie|CoreWebView2::Cookie>
+
+=item L<CookieList|CoreWebView2::CookieList>
+
+=item L<CookieManager|CoreWebView2::CookieManager>
+
+=item L<CoreWebView2|CoreWebView2::CoreWebView2>
+
+=item L<CustomSchemeRegistration|CoreWebView2::CustomSchemeRegistration>
+
+=item L<Deferral|CoreWebView2::Deferral>
+
+=item L<DevToolsProtocolEventReceiver|CoreWebView2::DevToolsProtocolEventReceiver>
+
+=item L<DownloadOperation|CoreWebView2::DownloadOperation>
+
+=item L<Environment|CoreWebView2::Environment>
+
+=item L<EnvironmentOptions|CoreWebView2::EnvironmentOptions>
+
+=item L<File|CoreWebView2::File>
+
+=item L<Frame|CoreWebView2::Frame>
+
+=item L<FrameInfo|CoreWebView2::FrameInfo>
+
+=item L<FrameInfoCollection|CoreWebView2::FrameInfoCollection>
+
+=item L<FrameInfoCollectionIterator|CoreWebView2::FrameInfoCollectionIterator>
+
+=item L<HttpHeadersCollectionIterator|CoreWebView2::HttpHeadersCollectionIterator>
+
+=item L<HttpRequestHeaders|CoreWebView2::HttpRequestHeaders>
+
+=item L<HttpResponseHeaders|CoreWebView2::HttpResponseHeaders>
+
+=item L<ObjectCollectionView|CoreWebView2::ObjectCollectionView>
+
+=item L<PermissionSetting|CoreWebView2::PermissionSetting>
+
+=item L<PermissionSettingCollectionView|CoreWebView2::PermissionSettingCollectionView>
+
+=item L<PointerInfo|CoreWebView2::PointerInfo>
+
+=item L<PrintSettings|CoreWebView2::PrintSettings>
+
+=item L<ProcessExtendedInfo|CoreWebView2::ProcessExtendedInfo>
+
+=item L<ProcessExtendedInfoCollection|CoreWebView2::ProcessExtendedInfoCollection>
+
+=item L<ProcessInfo|CoreWebView2::ProcessInfo>
+
+=item L<ProcessInfoCollection|CoreWebView2::ProcessInfoCollection>
+
+=item L<Profile|CoreWebView2::Profile>
+
+=item L<Settings|CoreWebView2::Settings>
+
+=item L<SharedBuffer|CoreWebView2::SharedBuffer>
+
+=item L<StringCollection|CoreWebView2::StringCollection>
+
+=item L<WebResourceRequest|CoreWebView2::WebResourceRequest>
+
+=item L<WebResourceResponse|CoreWebView2::WebResourceResponse>
+
+=item L<WebResourceResponseView|CoreWebView2::WebResourceResponseView>
+
+=item L<WindowFeatures|CoreWebView2::WindowFeatures>
+
+=back
+
+=head1 ERROR CODES
+
+The system functions that are wrapped by this module pass data via pointers, and return error codes. This module wraps that behavior, and returns the actual data (or in cases where data is not passed back, true). If the wrapped function returns anything other than S_OK, the Perl wrapper will set C<$CoreWebView2::Error> to the error and return C<undef>.
+
+However, if you have set C<$CoreWebView2::AUTODIE> to a true value, the functions will die instead. (C<$CoreWebView2::Error> will still be set.)
+
+Note that C<$CoreWebView2::Error> will be a dual-value scalar: the numeric error code and the string message provided by Windows.
+
+A list of common error codes can be found at L<https://learn.microsoft.com/en-us/windows/win32/seccrypto/common-hresult-values>.
+
+A more comprehensive list can be found at L<https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/705fb797-2175-4a90-b5a3-3918024b10b8>.
+
+=head1 EVENTS
+
+There are two types of events. Repeated events are usually generated by a user action (such as a link click) but can also be generated in response to programmatic actions (such as a the C<Navigate> function). These events are hooked up by passing a handler to an C<add_I<EVENT>> function, and can be unhooked via the corresponding C<remove_I<EVENT>> function.
+
+The second type are one-time events. In this case, the handler is passed as a parameter to a function, and the event is generated when that function has completed.
+
+You may pass any Perl object as a handler. The appropriate method will be called on that object.
+
+Events expect an integer as the return value. Return 0 (C<S_OK>) for success, or an appropriate error code. The wrapper code will also catch fatal errors and resolve them to an integer return value. So you can C<die $error_code>. if you prefer.
+
+If the error resolves to 0, C<E_FAIL> will be returned instead of C<S_OK>, so if you call code that returns a string instead of an integer, the wrapper can still handle it.
+
+=head1 SPECIAL DATA TYPES
+
+In addition to the standard types (integer, string, boolean), a number of special types are also used. Special types that are only used in one method will be described there, but those below are used in multiple locations.
+
+=head2 EventRegistrationToken
+
+A unique integer representing an event handler. You should treat this token as an opaque value, and not attempt to manipulate it.
+
+When you add an event handler, a token will be returned. If you later want to remove the event handler, you pass back the token.
+
+=head2 POINT
+
+An arrayref of the form C<[x, y]>.
+
+=head2 RECT
+
+A hashref with the keys C<left, right, top, bottom>.
+
+=head2 stream
+
+A wrapper around an C<IStream> interface.
+
+You can pass to the system one of the following values:
+
+=over
+
+* a scalar which will be automatically wrapped in a C<CoreWebView2::Helper::PerlStream> object
+
+* your own wrapper object (see below)
+
+* a C<CoreWebView2::Helper::Stream> object originally obtained from the system
+
+=back
+
+The system will pass one of the following values:
+
+=over
+
+* a C<CoreWebView2::Helper::Stream> object
+
+* a <CoreWebView2::Helper::PerlStream> originally passed in from Perl
+
+=back
+
+If for some reason, you need more control at a lower level over how your data is streamed, you may create a subclass of C<CoreWebView2::Helper::PerlStream> and pass that in.
+
+=head2 VARIANT
+
+This is a special type used to pass values between Perl and JavaScript. Simple scalars, arrayrefs, hashrefs, subrefs, and blessed objects are supported.
+
+=over
+
+Simple scalars will be copied
+
+Perl C<undef> will be passed/recieved as JavaScript C<null>
+
+A Perl arrayref will be passed/recieved as a JavaScript C<Array>
+
+Anything else will be wrapped in a proxy object
+
+=back
+
+In addition the CoreWebView2 object methods where VARIANT is explicitly indicated as a parameter type, it is also the implicit type for properties, parameters and return values passed back and forth between JavaScript and Perl. For the most part, this should be transparent to the programmer (but see shortcomings below). Just pass whatever Perl data type you want, and this module should do the right thing.
+
+=head3 Known shortcomings
+
+JavaScript does not support getting a list of properties from a proxy object, so you cannot iterate over the keys via the Perl wrapper. Similarly, JavaScript will not ask for a list of keys, so if you log the wrapper to the console, it will simply say "Proxy object".
+
+It is not possible to return a value to Perl from a JavaScript callback or method. The JavaScript function will run, but the system will always return C<undef> to Perl. This is not an issue with this module, it is known issue with CoreWebView2 functionality. See L<https://github.com/MicrosoftEdge/WebView2Feedback/issues/515> and L<https://github.com/MicrosoftEdge/WebView2Feedback/issues/1248>>.
+
+In addition, it does not seem to be possible to update the properties of a JavaScript object from Perl. Again, this appears to be missing functionality and not a bug with this module.
+
+However, you can return a value to JavaScript from a Perl callback, and update a Perl hashref element's value from JavaScript.
+
+=cut

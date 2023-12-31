@@ -1,0 +1,412 @@
+=pod
+
+=head1 NAME
+
+CoreWebView2::Environment
+
+=head1 VERSION
+
+0.001.000
+
+=head1 SYNOPSIS
+
+TBD
+
+=head1 DESCRIPTION
+
+TBD
+
+=head1 METHODS
+
+=head2 CreateContextMenuItem
+
+    $item = $object->CreateContextMenuItem($label, $iconStream, $kind);
+
+Takes
+
+=over
+
+=item * $label: string
+
+=item * $iconStream: stream
+
+=item * $kind: L<CONTEXT_MENU_ITEM_KIND|CoreWebView2::constants/CONTEXT_MENU_ITEM_KIND> constant
+
+=back
+
+Returns a L<CoreWebView2::ContextMenuItem> object
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2environment9#createcontextmenuitem>.
+
+=head2 CreateCoreWebView2CompositionController
+
+    $result = $object->CreateCoreWebView2CompositionController($parentWindow, $handler);
+
+Takes
+
+=over
+
+=item * $parentWindow: unsigned integer
+
+=item * $handler: event handler object
+
+=back
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+Triggers L</CreateCoreWebView2CompositionControllerCompleted>
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2environment3#createcorewebview2compositioncontroller>.
+
+=head2 CreateCoreWebView2CompositionControllerWithOptions
+
+    $result = $object->CreateCoreWebView2CompositionControllerWithOptions($parentWindow, $options, $handler);
+
+Takes
+
+=over
+
+=item * $parentWindow: unsigned integer
+
+=item * $options: L<CoreWebView2::ControllerOptions> object
+
+=item * $handler: event handler object
+
+=back
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+Triggers L</CreateCoreWebView2CompositionControllerCompleted>
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2environment10#createcorewebview2compositioncontrollerwithoptions>.
+
+=head2 CreateCoreWebView2Controller
+
+    $result = $object->CreateCoreWebView2Controller($parentWindow, $handler);
+
+Takes
+
+=over
+
+=item * $parentWindow: unsigned integer
+
+=item * $handler: event handler object
+
+=back
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+Triggers L</CreateCoreWebView2ControllerCompleted>
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2environment#createcorewebview2controller>.
+
+=head2 CreateCoreWebView2ControllerOptions
+
+    $options = $object->CreateCoreWebView2ControllerOptions();
+
+Returns a L<CoreWebView2::ControllerOptions> object
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2environment10#createcorewebview2controlleroptions>.
+
+=head2 CreateCoreWebView2ControllerWithOptions
+
+    $result = $object->CreateCoreWebView2ControllerWithOptions($parentWindow, $options, $handler);
+
+Takes
+
+=over
+
+=item * $parentWindow: unsigned integer
+
+=item * $options: L<CoreWebView2::ControllerOptions> object
+
+=item * $handler: event handler object
+
+=back
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+Triggers L</CreateCoreWebView2ControllerCompleted>
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2environment10#createcorewebview2controllerwithoptions>.
+
+=head2 CreateCoreWebView2PointerInfo
+
+    $pointerInfo = $object->CreateCoreWebView2PointerInfo();
+
+Returns a L<CoreWebView2::PointerInfo> object
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2environment3#createcorewebview2pointerinfo>.
+
+=head2 CreatePrintSettings
+
+    $printSettings = $object->CreatePrintSettings();
+
+Returns a L<CoreWebView2::PrintSettings> object
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2environment6#createprintsettings>.
+
+=head2 CreateSharedBuffer
+
+    $shared_buffer = $object->CreateSharedBuffer($size);
+
+Takes
+
+=over
+
+=item * $size: unsigned integer
+
+=back
+
+Returns a L<CoreWebView2::SharedBuffer> object
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2environment12#createsharedbuffer>.
+
+=head2 CreateWebResourceRequest
+
+    $request = $object->CreateWebResourceRequest($uri, $method, $postData, $headers);
+
+Takes
+
+=over
+
+=item * $uri: string
+
+=item * $method: string
+
+=item * $postData: stream
+
+=item * $headers: string
+
+=back
+
+Returns a L<CoreWebView2::WebResourceRequest> object
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2environment2#createwebresourcerequest>.
+
+=head2 CreateWebResourceResponse
+
+    $response = $object->CreateWebResourceResponse($content, $statusCode, $reasonPhrase, $headers);
+
+Takes
+
+=over
+
+=item * $content: stream
+
+=item * $statusCode: integer
+
+=item * $reasonPhrase: string
+
+=item * $headers: string
+
+=back
+
+Returns a L<CoreWebView2::WebResourceResponse> object
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2environment#createwebresourceresponse>.
+
+=head2 GetAutomationProviderForWindow
+
+    $provider = $object->GetAutomationProviderForWindow($hwnd);
+
+Takes
+
+=over
+
+=item * $hwnd: unsigned integer
+
+=back
+
+Returns a TYPE NOT YET SUPPORTED
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2environment4#getautomationproviderforwindow>.
+
+=head2 GetProcessExtendedInfos
+
+    $result = $object->GetProcessExtendedInfos($handler);
+
+Takes
+
+=over
+
+=item * $handler: event handler object
+
+=back
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+Triggers L</GetProcessExtendedInfosCompleted>
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2environment13#getprocessextendedinfos>.
+
+=head2 GetProcessInfos
+
+    $value = $object->GetProcessInfos();
+
+Returns a L<CoreWebView2::ProcessInfoCollection> object
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2environment8#getprocessinfos>.
+
+=head1 PROPERTIES
+
+=head2 BrowserVersionString
+
+    $versionInfo = $object->get_BrowserVersionString();
+
+A string.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2environment#get_browserversionstring>.
+
+=head2 FailureReportFolderPath
+
+    $value = $object->get_FailureReportFolderPath();
+
+A string.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2environment11#get_failurereportfolderpath>.
+
+=head2 UserDataFolder
+
+    $value = $object->get_UserDataFolder();
+
+A string.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2environment7#get_userdatafolder>.
+
+=head1 EVENTS
+
+=head2 BrowserProcessExited
+
+    $token = $object->add_BrowserProcessExited($handler);
+    $result = $object->remove_BrowserProcessExited($token);
+
+    # in handler class
+    sub BrowserProcessExited {
+        my ($self, $sender, $args) = @_;
+
+        # handle the event here
+    }
+
+Passes
+
+=over
+
+=item * $sender: L<CoreWebView2::Environment> object
+
+=item * $args: L<CoreWebView2::BrowserProcessExitedEventArgs> object
+
+=back
+
+=head2 CreateCoreWebView2CompositionControllerCompleted
+
+    $result = $object->CreateCoreWebView2CompositionController(...);
+    $result = $object->CreateCoreWebView2CompositionControllerWithOptions(...);
+
+    # in handler class
+    sub CreateCoreWebView2CompositionControllerCompleted {
+        my ($self, $errorCode, $webView) = @_;
+
+        # handle the event here
+    }
+
+See L</CreateCoreWebView2CompositionController>, L</CreateCoreWebView2CompositionControllerWithOptions>.
+
+Passes
+
+=over
+
+=item * $errorCode: L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+=item * $webView: L<CoreWebView2::CompositionController> object
+
+=back
+
+=head2 CreateCoreWebView2ControllerCompleted
+
+    $result = $object->CreateCoreWebView2Controller(...);
+    $result = $object->CreateCoreWebView2ControllerWithOptions(...);
+
+    # in handler class
+    sub CreateCoreWebView2ControllerCompleted {
+        my ($self, $errorCode, $createdController) = @_;
+
+        # handle the event here
+    }
+
+See L</CreateCoreWebView2Controller>, L</CreateCoreWebView2ControllerWithOptions>.
+
+Passes
+
+=over
+
+=item * $errorCode: L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+=item * $createdController: L<CoreWebView2::Controller> object
+
+=back
+
+=head2 GetProcessExtendedInfosCompleted
+
+    $result = $object->GetProcessExtendedInfos(...);
+
+    # in handler class
+    sub GetProcessExtendedInfosCompleted {
+        my ($self, $errorCode, $value) = @_;
+
+        # handle the event here
+    }
+
+See L</GetProcessExtendedInfos>.
+
+Passes
+
+=over
+
+=item * $errorCode: L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+=item * $value: L<CoreWebView2::ProcessExtendedInfoCollection> object
+
+=back
+
+=head2 NewBrowserVersionAvailable
+
+    $token = $object->add_NewBrowserVersionAvailable($handler);
+    $result = $object->remove_NewBrowserVersionAvailable($token);
+
+    # in handler class
+    sub NewBrowserVersionAvailable {
+        my ($self, $sender) = @_;
+
+        # handle the event here
+    }
+
+Passes
+
+=over
+
+=item * $sender: L<CoreWebView2::Environment> object
+
+=back
+
+=head2 ProcessInfosChanged
+
+    $token = $object->add_ProcessInfosChanged($handler);
+    $result = $object->remove_ProcessInfosChanged($token);
+
+    # in handler class
+    sub ProcessInfosChanged {
+        my ($self, $sender) = @_;
+
+        # handle the event here
+    }
+
+Passes
+
+=over
+
+=item * $sender: L<CoreWebView2::Environment> object
+
+=back
+
+=cut

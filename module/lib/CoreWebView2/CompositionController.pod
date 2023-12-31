@@ -1,0 +1,184 @@
+=pod
+
+=head1 NAME
+
+CoreWebView2::CompositionController
+
+=head1 VERSION
+
+0.001.000
+
+=head1 SYNOPSIS
+
+TBD
+
+=head1 DESCRIPTION
+
+TBD
+
+=head1 METHODS
+
+=head2 DragEnter
+
+    $effect = $object->DragEnter($dataObject, $keyState, $point);
+
+Takes
+
+=over
+
+=item * $dataObject: TYPE NOT YET SUPPORTED
+
+=item * $keyState: unsigned integer
+
+=item * $point: POINT (arrayref C<[x, y]>)
+
+=back
+
+Returns an unsigned integer
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2compositioncontroller3#dragenter>.
+
+=head2 DragLeave
+
+    $result = $object->DragLeave();
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2compositioncontroller3#dragleave>.
+
+=head2 DragOver
+
+    $effect = $object->DragOver($keyState, $point);
+
+Takes
+
+=over
+
+=item * $keyState: unsigned integer
+
+=item * $point: POINT (arrayref C<[x, y]>)
+
+=back
+
+Returns an unsigned integer
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2compositioncontroller3#dragover>.
+
+=head2 Drop
+
+    $effect = $object->Drop($dataObject, $keyState, $point);
+
+Takes
+
+=over
+
+=item * $dataObject: TYPE NOT YET SUPPORTED
+
+=item * $keyState: unsigned integer
+
+=item * $point: POINT (arrayref C<[x, y]>)
+
+=back
+
+Returns an unsigned integer
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2compositioncontroller3#drop>.
+
+=head2 SendMouseInput
+
+    $result = $object->SendMouseInput($eventKind, $virtualKeys, $mouseData, $point);
+
+Takes
+
+=over
+
+=item * $eventKind: L<MOUSE_EVENT_KIND|CoreWebView2::constants/MOUSE_EVENT_KIND> constant
+
+=item * $virtualKeys: L<MOUSE_EVENT_VIRTUAL_KEYS|CoreWebView2::constants/MOUSE_EVENT_VIRTUAL_KEYS> constant
+
+=item * $mouseData: unsigned integer
+
+=item * $point: POINT (arrayref C<[x, y]>)
+
+=back
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2compositioncontroller#sendmouseinput>.
+
+=head2 SendPointerInput
+
+    $result = $object->SendPointerInput($eventKind, $pointerInfo);
+
+Takes
+
+=over
+
+=item * $eventKind: L<POINTER_EVENT_KIND|CoreWebView2::constants/POINTER_EVENT_KIND> constant
+
+=item * $pointerInfo: L<CoreWebView2::PointerInfo> object
+
+=back
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2compositioncontroller#sendpointerinput>.
+
+=head1 PROPERTIES
+
+=head2 AutomationProvider
+
+    $provider = $object->get_AutomationProvider();
+
+A TYPE NOT YET SUPPORTED.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2compositioncontroller2#get_automationprovider>.
+
+=head2 Cursor
+
+    $cursor = $object->get_Cursor();
+
+An unsigned integer.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2compositioncontroller#get_cursor>.
+
+=head2 RootVisualTarget
+
+    $target = $object->get_RootVisualTarget();
+    $object->put_RootVisualTarget($target);
+
+A TYPE NOT YET SUPPORTED.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2compositioncontroller#get_rootvisualtarget>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2compositioncontroller#put_rootvisualtarget>.
+
+=head2 SystemCursorId
+
+    $systemCursorId = $object->get_SystemCursorId();
+
+An unsigned integer.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2compositioncontroller#get_systemcursorid>.
+
+=head1 EVENTS
+
+=head2 CursorChanged
+
+    $token = $object->add_CursorChanged($handler);
+    $result = $object->remove_CursorChanged($token);
+
+    # in handler class
+    sub CursorChanged {
+        my ($self, $sender) = @_;
+
+        # handle the event here
+    }
+
+Passes
+
+=over
+
+=item * $sender: L<CoreWebView2::CompositionController> object
+
+=back
+
+=cut

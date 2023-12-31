@@ -1,0 +1,182 @@
+=pod
+
+=head1 NAME
+
+CoreWebView2::CookieManager
+
+=head1 VERSION
+
+0.001.000
+
+=head1 SYNOPSIS
+
+TBD
+
+=head1 DESCRIPTION
+
+TBD
+
+=head1 METHODS
+
+=head2 AddOrUpdateCookie
+
+    $result = $object->AddOrUpdateCookie($cookie);
+
+Takes
+
+=over
+
+=item * $cookie: L<CoreWebView2::Cookie> object
+
+=back
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2cookiemanager#addorupdatecookie>.
+
+=head2 CopyCookie
+
+    $cookie = $object->CopyCookie($cookieParam);
+
+Takes
+
+=over
+
+=item * $cookieParam: L<CoreWebView2::Cookie> object
+
+=back
+
+Returns a L<CoreWebView2::Cookie> object
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2cookiemanager#copycookie>.
+
+=head2 CreateCookie
+
+    $cookie = $object->CreateCookie($name, $value, $domain, $path);
+
+Takes
+
+=over
+
+=item * $name: string
+
+=item * $value: string
+
+=item * $domain: string
+
+=item * $path: string
+
+=back
+
+Returns a L<CoreWebView2::Cookie> object
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2cookiemanager#createcookie>.
+
+=head2 DeleteAllCookies
+
+    $result = $object->DeleteAllCookies();
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2cookiemanager#deleteallcookies>.
+
+=head2 DeleteCookie
+
+    $result = $object->DeleteCookie($cookie);
+
+Takes
+
+=over
+
+=item * $cookie: L<CoreWebView2::Cookie> object
+
+=back
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2cookiemanager#deletecookie>.
+
+=head2 DeleteCookies
+
+    $result = $object->DeleteCookies($name, $uri);
+
+Takes
+
+=over
+
+=item * $name: string
+
+=item * $uri: string
+
+=back
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2cookiemanager#deletecookies>.
+
+=head2 DeleteCookiesWithDomainAndPath
+
+    $result = $object->DeleteCookiesWithDomainAndPath($name, $domain, $path);
+
+Takes
+
+=over
+
+=item * $name: string
+
+=item * $domain: string
+
+=item * $path: string
+
+=back
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2cookiemanager#deletecookieswithdomainandpath>.
+
+=head2 GetCookies
+
+    $result = $object->GetCookies($uri, $handler);
+
+Takes
+
+=over
+
+=item * $uri: string
+
+=item * $handler: event handler object
+
+=back
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+Triggers L</GetCookiesCompleted>
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2cookiemanager#getcookies>.
+
+=head1 EVENTS
+
+=head2 GetCookiesCompleted
+
+    $result = $object->GetCookies(...);
+
+    # in handler class
+    sub GetCookiesCompleted {
+        my ($self, $result, $cookieList) = @_;
+
+        # handle the event here
+    }
+
+See L</GetCookies>.
+
+Passes
+
+=over
+
+=item * $result: L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+=item * $cookieList: L<CoreWebView2::CookieList> object
+
+=back
+
+=cut

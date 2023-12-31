@@ -1,0 +1,50 @@
+use strict;
+use warnings;
+
+use Test::More tests => 43;
+BEGIN { use_ok('CoreWebView2') };
+
+# PrintSettings
+ok(0, 'PrintSettings::get_Collation');
+ok(0, 'PrintSettings::get_ColorMode');
+ok(0, 'PrintSettings::get_Copies');
+ok(0, 'PrintSettings::get_Duplex');
+ok(0, 'PrintSettings::get_FooterUri');
+ok(0, 'PrintSettings::get_HeaderTitle');
+ok(0, 'PrintSettings::get_MarginBottom');
+ok(0, 'PrintSettings::get_MarginLeft');
+ok(0, 'PrintSettings::get_MarginRight');
+ok(0, 'PrintSettings::get_MarginTop');
+ok(0, 'PrintSettings::get_MediaSize');
+ok(0, 'PrintSettings::get_Orientation');
+ok(0, 'PrintSettings::get_PageHeight');
+ok(0, 'PrintSettings::get_PageRanges');
+ok(0, 'PrintSettings::get_PageWidth');
+ok(0, 'PrintSettings::get_PagesPerSide');
+ok(0, 'PrintSettings::get_PrinterName');
+ok(0, 'PrintSettings::get_ScaleFactor');
+ok(0, 'PrintSettings::get_ShouldPrintBackgrounds');
+ok(0, 'PrintSettings::get_ShouldPrintHeaderAndFooter');
+ok(0, 'PrintSettings::get_ShouldPrintSelectionOnly');
+ok(0, 'PrintSettings::put_Collation');
+ok(0, 'PrintSettings::put_ColorMode');
+ok(0, 'PrintSettings::put_Copies');
+ok(0, 'PrintSettings::put_Duplex');
+ok(0, 'PrintSettings::put_FooterUri');
+ok(0, 'PrintSettings::put_HeaderTitle');
+ok(0, 'PrintSettings::put_MarginBottom');
+ok(0, 'PrintSettings::put_MarginLeft');
+ok(0, 'PrintSettings::put_MarginRight');
+ok(0, 'PrintSettings::put_MarginTop');
+ok(0, 'PrintSettings::put_MediaSize');
+ok(0, 'PrintSettings::put_Orientation');
+ok(0, 'PrintSettings::put_PageHeight');
+ok(0, 'PrintSettings::put_PageRanges');
+ok(0, 'PrintSettings::put_PageWidth');
+ok(0, 'PrintSettings::put_PagesPerSide');
+ok(0, 'PrintSettings::put_PrinterName');
+ok(0, 'PrintSettings::put_ScaleFactor');
+ok(0, 'PrintSettings::put_ShouldPrintBackgrounds');
+ok(0, 'PrintSettings::put_ShouldPrintHeaderAndFooter');
+ok(0, 'PrintSettings::put_ShouldPrintSelectionOnly');
+

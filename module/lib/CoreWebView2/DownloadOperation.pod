@@ -1,0 +1,189 @@
+=pod
+
+=head1 NAME
+
+CoreWebView2::DownloadOperation
+
+=head1 VERSION
+
+0.001.000
+
+=head1 SYNOPSIS
+
+TBD
+
+=head1 DESCRIPTION
+
+TBD
+
+=head1 METHODS
+
+=head2 Cancel
+
+    $result = $object->Cancel();
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2downloadoperation#cancel>.
+
+=head2 Pause
+
+    $result = $object->Pause();
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2downloadoperation#pause>.
+
+=head2 Resume
+
+    $result = $object->Resume();
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2downloadoperation#resume>.
+
+=head1 PROPERTIES
+
+=head2 BytesReceived
+
+    $bytesReceived = $object->get_BytesReceived();
+
+An integer.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2downloadoperation#get_bytesreceived>.
+
+=head2 CanResume
+
+    $canResume = $object->get_CanResume();
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2downloadoperation#get_canresume>.
+
+=head2 ContentDisposition
+
+    $contentDisposition = $object->get_ContentDisposition();
+
+A string.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2downloadoperation#get_contentdisposition>.
+
+=head2 EstimatedEndTime
+
+    $estimatedEndTime = $object->get_EstimatedEndTime();
+
+A string.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2downloadoperation#get_estimatedendtime>.
+
+=head2 InterruptReason
+
+    $interruptReason = $object->get_InterruptReason();
+
+A L<DOWNLOAD_INTERRUPT_REASON|CoreWebView2::constants/DOWNLOAD_INTERRUPT_REASON> constant.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2downloadoperation#get_interruptreason>.
+
+=head2 MimeType
+
+    $mimeType = $object->get_MimeType();
+
+A string.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2downloadoperation#get_mimetype>.
+
+=head2 ResultFilePath
+
+    $resultFilePath = $object->get_ResultFilePath();
+
+A string.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2downloadoperation#get_resultfilepath>.
+
+=head2 State
+
+    $downloadState = $object->get_State();
+
+A L<DOWNLOAD_STATE|CoreWebView2::constants/DOWNLOAD_STATE> constant.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2downloadoperation#get_state>.
+
+=head2 TotalBytesToReceive
+
+    $totalBytesToReceive = $object->get_TotalBytesToReceive();
+
+An integer.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2downloadoperation#get_totalbytestoreceive>.
+
+=head2 Uri
+
+    $uri = $object->get_Uri();
+
+A string.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2downloadoperation#get_uri>.
+
+=head1 EVENTS
+
+=head2 BytesReceivedChanged
+
+    $token = $object->add_BytesReceivedChanged($handler);
+    $result = $object->remove_BytesReceivedChanged($token);
+
+    # in handler class
+    sub BytesReceivedChanged {
+        my ($self, $sender) = @_;
+
+        # handle the event here
+    }
+
+Passes
+
+=over
+
+=item * $sender: L<CoreWebView2::DownloadOperation> object
+
+=back
+
+=head2 EstimatedEndTimeChanged
+
+    $token = $object->add_EstimatedEndTimeChanged($handler);
+    $result = $object->remove_EstimatedEndTimeChanged($token);
+
+    # in handler class
+    sub EstimatedEndTimeChanged {
+        my ($self, $sender) = @_;
+
+        # handle the event here
+    }
+
+Passes
+
+=over
+
+=item * $sender: L<CoreWebView2::DownloadOperation> object
+
+=back
+
+=head2 StateChanged
+
+    $token = $object->add_StateChanged($handler);
+    $result = $object->remove_StateChanged($token);
+
+    # in handler class
+    sub StateChanged {
+        my ($self, $sender) = @_;
+
+        # handle the event here
+    }
+
+Passes
+
+=over
+
+=item * $sender: L<CoreWebView2::DownloadOperation> object
+
+=back
+
+=cut

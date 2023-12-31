@@ -1,0 +1,39 @@
+=pod
+
+=head1 NAME
+
+CoreWebView2::ProcessInfo
+
+=head1 VERSION
+
+0.001.000
+
+=head1 SYNOPSIS
+
+TBD
+
+=head1 DESCRIPTION
+
+TBD
+
+=head1 METHODS
+
+=head1 PROPERTIES
+
+=head2 Kind
+
+    $kind = $object->get_Kind();
+
+A L<PROCESS_KIND|CoreWebView2::constants/PROCESS_KIND> constant.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2processinfo#get_kind>.
+
+=head2 ProcessId
+
+    $value = $object->get_ProcessId();
+
+An integer.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2processinfo#get_processid>.
+
+=cut

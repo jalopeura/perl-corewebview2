@@ -1,0 +1,63 @@
+=pod
+
+=head1 NAME
+
+CoreWebView2::SharedBuffer
+
+=head1 VERSION
+
+0.001.000
+
+=head1 SYNOPSIS
+
+TBD
+
+=head1 DESCRIPTION
+
+TBD
+
+=head1 METHODS
+
+=head2 Close
+
+    $result = $object->Close();
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2sharedbuffer#close>.
+
+=head2 OpenStream
+
+    $value = $object->OpenStream();
+
+Returns a stream
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2sharedbuffer#openstream>.
+
+=head1 PROPERTIES
+
+=head2 Buffer
+
+    $value = $object->get_Buffer();
+
+An integer.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2sharedbuffer#get_buffer>.
+
+=head2 FileMappingHandle
+
+    $value = $object->get_FileMappingHandle();
+
+A TYPE NOT YET SUPPORTED.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2sharedbuffer#get_filemappinghandle>.
+
+=head2 Size
+
+    $value = $object->get_Size();
+
+An unsigned integer.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2sharedbuffer#get_size>.
+
+=cut

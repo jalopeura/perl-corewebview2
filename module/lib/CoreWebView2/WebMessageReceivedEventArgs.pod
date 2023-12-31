@@ -1,0 +1,55 @@
+=pod
+
+=head1 NAME
+
+CoreWebView2::WebMessageReceivedEventArgs
+
+=head1 VERSION
+
+0.001.000
+
+=head1 SYNOPSIS
+
+TBD
+
+=head1 DESCRIPTION
+
+TBD
+
+=head1 METHODS
+
+=head2 TryGetWebMessageAsString
+
+    $webMessageAsString = $object->TryGetWebMessageAsString();
+
+Returns a string
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2webmessagereceivedeventargs#trygetwebmessageasstring>.
+
+=head1 PROPERTIES
+
+=head2 AdditionalObjects
+
+    $value = $object->get_AdditionalObjects();
+
+A L<CoreWebView2::ObjectCollectionView> object.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2webmessagereceivedeventargs2#get_additionalobjects>.
+
+=head2 Source
+
+    $source = $object->get_Source();
+
+A string.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2webmessagereceivedeventargs#get_source>.
+
+=head2 WebMessageAsJson
+
+    $webMessageAsJson = $object->get_WebMessageAsJson();
+
+A string.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2webmessagereceivedeventargs#get_webmessageasjson>.
+
+=cut

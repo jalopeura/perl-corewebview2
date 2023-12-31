@@ -1,0 +1,47 @@
+=pod
+
+=head1 NAME
+
+CoreWebView2::PermissionSettingCollectionView
+
+=head1 VERSION
+
+0.001.000
+
+=head1 SYNOPSIS
+
+TBD
+
+=head1 DESCRIPTION
+
+TBD
+
+=head1 METHODS
+
+=head2 GetValueAtIndex
+
+    $permissionSetting = $object->GetValueAtIndex($index);
+
+Takes
+
+=over
+
+=item * $index: unsigned integer
+
+=back
+
+Returns a L<CoreWebView2::PermissionSetting> object
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2permissionsettingcollectionview#getvalueatindex>.
+
+=head1 PROPERTIES
+
+=head2 Count
+
+    $value = $object->get_Count();
+
+An unsigned integer.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2permissionsettingcollectionview#get_count>.
+
+=cut

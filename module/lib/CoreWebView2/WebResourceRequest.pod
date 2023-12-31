@@ -1,0 +1,58 @@
+=pod
+
+=head1 NAME
+
+CoreWebView2::WebResourceRequest
+
+=head1 VERSION
+
+0.001.000
+
+=head1 SYNOPSIS
+
+TBD
+
+=head1 DESCRIPTION
+
+TBD
+
+=head1 METHODS
+
+=head1 PROPERTIES
+
+=head2 Content
+
+    $content = $object->get_Content();
+    $object->put_Content($content);
+
+A stream.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2webresourcerequest#get_content>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2webresourcerequest#put_content>.
+
+=head2 Headers
+
+    $headers = $object->get_Headers();
+
+A L<CoreWebView2::HttpRequestHeaders> object.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2webresourcerequest#get_headers>.
+
+=head2 Method
+
+    $method = $object->get_Method();
+    $object->put_Method($method);
+
+A string.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2webresourcerequest#get_method>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2webresourcerequest#put_method>.
+
+=head2 Uri
+
+    $uri = $object->get_Uri();
+    $object->put_Uri($uri);
+
+A string.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2webresourcerequest#get_uri>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2webresourcerequest#put_uri>.
+
+=cut

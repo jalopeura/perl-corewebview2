@@ -1,0 +1,354 @@
+=pod
+
+=head1 NAME
+
+CoreWebView2::Frame
+
+=head1 VERSION
+
+0.001.000
+
+=head1 SYNOPSIS
+
+TBD
+
+=head1 DESCRIPTION
+
+TBD
+
+=head1 METHODS
+
+=head2 AddHostObjectToScriptWithOrigins
+
+    $result = $object->AddHostObjectToScriptWithOrigins($name, $object, $originsCount, $origins);
+
+Takes
+
+=over
+
+=item * $name: string
+
+=item * $object: VARIANT
+
+=item * $originsCount: unsigned integer
+
+=item * $origins: string
+
+=back
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2frame#addhostobjecttoscriptwithorigins>.
+
+=head2 ExecuteScript
+
+    $result = $object->ExecuteScript($javaScript, $handler);
+
+Takes
+
+=over
+
+=item * $javaScript: string
+
+=item * $handler: event handler object
+
+=back
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+Triggers L</ExecuteScriptCompleted>
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2frame2#executescript>.
+
+=head2 IsDestroyed
+
+    $destroyed = $object->IsDestroyed();
+
+Returns a boolean
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2frame#isdestroyed>.
+
+=head2 PostSharedBufferToScript
+
+    $result = $object->PostSharedBufferToScript($sharedBuffer, $access, $additionalDataAsJson);
+
+Takes
+
+=over
+
+=item * $sharedBuffer: L<CoreWebView2::SharedBuffer> object
+
+=item * $access: L<SHARED_BUFFER_ACCESS|CoreWebView2::constants/SHARED_BUFFER_ACCESS> constant
+
+=item * $additionalDataAsJson: string
+
+=back
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2frame4#postsharedbuffertoscript>.
+
+=head2 PostWebMessageAsJson
+
+    $result = $object->PostWebMessageAsJson($webMessageAsJson);
+
+Takes
+
+=over
+
+=item * $webMessageAsJson: string
+
+=back
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2frame2#postwebmessageasjson>.
+
+=head2 PostWebMessageAsString
+
+    $result = $object->PostWebMessageAsString($webMessageAsString);
+
+Takes
+
+=over
+
+=item * $webMessageAsString: string
+
+=back
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2frame2#postwebmessageasstring>.
+
+=head2 RemoveHostObjectFromScript
+
+    $result = $object->RemoveHostObjectFromScript($name);
+
+Takes
+
+=over
+
+=item * $name: string
+
+=back
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2frame#removehostobjectfromscript>.
+
+=head1 PROPERTIES
+
+=head2 FrameId
+
+    $id = $object->get_FrameId();
+
+An unsigned integer.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2frame5#get_frameid>.
+
+=head2 Name
+
+    $name = $object->get_Name();
+
+A string.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2frame#get_name>.
+
+=head1 EVENTS
+
+=head2 ExecuteScriptCompleted
+
+    $result = $object->ExecuteScript(...);
+
+    # in handler class
+    sub ExecuteScriptCompleted {
+        my ($self, $errorCode, $resultObjectAsJson) = @_;
+
+        # handle the event here
+    }
+
+See L</ExecuteScript>.
+
+Passes
+
+=over
+
+=item * $errorCode: L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+=item * $resultObjectAsJson: string
+
+=back
+
+=head2 FrameContentLoading
+
+    $token = $object->add_ContentLoading($handler);
+    $result = $object->remove_ContentLoading($token);
+
+    # in handler class
+    sub FrameContentLoading {
+        my ($self, $sender, $args) = @_;
+
+        # handle the event here
+    }
+
+Passes
+
+=over
+
+=item * $sender: L<CoreWebView2::Frame> object
+
+=item * $args: L<CoreWebView2::ContentLoadingEventArgs> object
+
+=back
+
+=head2 FrameDOMContentLoaded
+
+    $token = $object->add_DOMContentLoaded($handler);
+    $result = $object->remove_DOMContentLoaded($token);
+
+    # in handler class
+    sub FrameDOMContentLoaded {
+        my ($self, $sender, $args) = @_;
+
+        # handle the event here
+    }
+
+Passes
+
+=over
+
+=item * $sender: L<CoreWebView2::Frame> object
+
+=item * $args: L<CoreWebView2::DOMContentLoadedEventArgs> object
+
+=back
+
+=head2 FrameDestroyed
+
+    $token = $object->add_Destroyed($handler);
+    $result = $object->remove_Destroyed($token);
+
+    # in handler class
+    sub FrameDestroyed {
+        my ($self, $sender) = @_;
+
+        # handle the event here
+    }
+
+Passes
+
+=over
+
+=item * $sender: L<CoreWebView2::Frame> object
+
+=back
+
+=head2 FrameNameChanged
+
+    $token = $object->add_NameChanged($handler);
+    $result = $object->remove_NameChanged($token);
+
+    # in handler class
+    sub FrameNameChanged {
+        my ($self, $sender) = @_;
+
+        # handle the event here
+    }
+
+Passes
+
+=over
+
+=item * $sender: L<CoreWebView2::Frame> object
+
+=back
+
+=head2 FrameNavigationCompleted
+
+    $token = $object->add_NavigationCompleted($handler);
+    $result = $object->remove_NavigationCompleted($token);
+
+    # in handler class
+    sub FrameNavigationCompleted {
+        my ($self, $sender, $args) = @_;
+
+        # handle the event here
+    }
+
+Passes
+
+=over
+
+=item * $sender: L<CoreWebView2::Frame> object
+
+=item * $args: L<CoreWebView2::NavigationCompletedEventArgs> object
+
+=back
+
+=head2 FrameNavigationStarting
+
+    $token = $object->add_NavigationStarting($handler);
+    $result = $object->remove_NavigationStarting($token);
+
+    # in handler class
+    sub FrameNavigationStarting {
+        my ($self, $sender, $args) = @_;
+
+        # handle the event here
+    }
+
+Passes
+
+=over
+
+=item * $sender: L<CoreWebView2::Frame> object
+
+=item * $args: L<CoreWebView2::NavigationStartingEventArgs> object
+
+=back
+
+=head2 FramePermissionRequested
+
+    $token = $object->add_PermissionRequested($handler);
+    $result = $object->remove_PermissionRequested($token);
+
+    # in handler class
+    sub FramePermissionRequested {
+        my ($self, $sender, $args) = @_;
+
+        # handle the event here
+    }
+
+Passes
+
+=over
+
+=item * $sender: L<CoreWebView2::Frame> object
+
+=item * $args: L<CoreWebView2::PermissionRequestedEventArgs> object
+
+=back
+
+=head2 FrameWebMessageReceived
+
+    $token = $object->add_WebMessageReceived($handler);
+    $result = $object->remove_WebMessageReceived($token);
+
+    # in handler class
+    sub FrameWebMessageReceived {
+        my ($self, $sender, $args) = @_;
+
+        # handle the event here
+    }
+
+Passes
+
+=over
+
+=item * $sender: L<CoreWebView2::Frame> object
+
+=item * $args: L<CoreWebView2::WebMessageReceivedEventArgs> object
+
+=back
+
+=cut

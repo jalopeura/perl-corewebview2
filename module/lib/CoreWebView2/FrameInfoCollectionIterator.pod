@@ -1,0 +1,47 @@
+=pod
+
+=head1 NAME
+
+CoreWebView2::FrameInfoCollectionIterator
+
+=head1 VERSION
+
+0.001.000
+
+=head1 SYNOPSIS
+
+TBD
+
+=head1 DESCRIPTION
+
+TBD
+
+=head1 METHODS
+
+=head2 GetCurrent
+
+    $frameInfo = $object->GetCurrent();
+
+Returns a L<CoreWebView2::FrameInfo> object
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2frameinfocollectioniterator#getcurrent>.
+
+=head2 MoveNext
+
+    $hasNext = $object->MoveNext();
+
+Returns a boolean
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2frameinfocollectioniterator#movenext>.
+
+=head1 PROPERTIES
+
+=head2 HasCurrent
+
+    $hasCurrent = $object->get_HasCurrent();
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2frameinfocollectioniterator#get_hascurrent>.
+
+=cut

@@ -1,0 +1,39 @@
+=pod
+
+=head1 NAME
+
+CoreWebView2::ProcessExtendedInfo
+
+=head1 VERSION
+
+0.001.000
+
+=head1 SYNOPSIS
+
+TBD
+
+=head1 DESCRIPTION
+
+TBD
+
+=head1 METHODS
+
+=head1 PROPERTIES
+
+=head2 AssociatedFrameInfos
+
+    $frames = $object->get_AssociatedFrameInfos();
+
+A L<CoreWebView2::FrameInfoCollection> object.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2processextendedinfo#get_associatedframeinfos>.
+
+=head2 ProcessInfo
+
+    $processInfo = $object->get_ProcessInfo();
+
+A L<CoreWebView2::ProcessInfo> object.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2processextendedinfo#get_processinfo>.
+
+=cut

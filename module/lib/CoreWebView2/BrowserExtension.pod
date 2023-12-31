@@ -1,0 +1,129 @@
+=pod
+
+=head1 NAME
+
+CoreWebView2::BrowserExtension
+
+=head1 VERSION
+
+0.001.000
+
+=head1 SYNOPSIS
+
+TBD
+
+=head1 DESCRIPTION
+
+TBD
+
+=head1 METHODS
+
+=head2 Enable
+
+    $result = $object->Enable($isEnabled, $handler);
+
+Takes
+
+=over
+
+=item * $isEnabled: boolean
+
+=item * $handler: event handler object
+
+=back
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+Triggers L</BrowserExtensionEnableCompleted>
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2browserextension#enable>.
+
+=head2 Remove
+
+    $result = $object->Remove($handler);
+
+Takes
+
+=over
+
+=item * $handler: event handler object
+
+=back
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+Triggers L</BrowserExtensionRemoveCompleted>
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2browserextension#remove>.
+
+=head1 PROPERTIES
+
+=head2 Id
+
+    $value = $object->get_Id();
+
+A string.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2browserextension#get_id>.
+
+=head2 IsEnabled
+
+    $value = $object->get_IsEnabled();
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2browserextension#get_isenabled>.
+
+=head2 Name
+
+    $value = $object->get_Name();
+
+A string.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2browserextension#get_name>.
+
+=head1 EVENTS
+
+=head2 BrowserExtensionEnableCompleted
+
+    $result = $object->Enable(...);
+
+    # in handler class
+    sub BrowserExtensionEnableCompleted {
+        my ($self, $errorCode) = @_;
+
+        # handle the event here
+    }
+
+See L</Enable>.
+
+Passes
+
+=over
+
+=item * $errorCode: L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+=back
+
+=head2 BrowserExtensionRemoveCompleted
+
+    $result = $object->Remove(...);
+
+    # in handler class
+    sub BrowserExtensionRemoveCompleted {
+        my ($self, $errorCode) = @_;
+
+        # handle the event here
+    }
+
+See L</Remove>.
+
+Passes
+
+=over
+
+=item * $errorCode: L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+=back
+
+=cut

@@ -1,0 +1,41 @@
+=pod
+
+=head1 NAME
+
+CoreWebView2::BasicAuthenticationResponse
+
+=head1 VERSION
+
+0.001.000
+
+=head1 SYNOPSIS
+
+TBD
+
+=head1 DESCRIPTION
+
+TBD
+
+=head1 METHODS
+
+=head1 PROPERTIES
+
+=head2 Password
+
+    $password = $object->get_Password();
+    $object->put_Password($password);
+
+A string.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2basicauthenticationresponse#get_password>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2basicauthenticationresponse#put_password>.
+
+=head2 UserName
+
+    $userName = $object->get_UserName();
+    $object->put_UserName($userName);
+
+A string.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2basicauthenticationresponse#get_username>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2basicauthenticationresponse#put_username>.
+
+=cut

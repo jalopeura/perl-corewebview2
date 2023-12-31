@@ -1,0 +1,63 @@
+=pod
+
+=head1 NAME
+
+CoreWebView2::FrameInfo
+
+=head1 VERSION
+
+0.001.000
+
+=head1 SYNOPSIS
+
+TBD
+
+=head1 DESCRIPTION
+
+TBD
+
+=head1 METHODS
+
+=head1 PROPERTIES
+
+=head2 FrameId
+
+    $id = $object->get_FrameId();
+
+An unsigned integer.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2frameinfo2#get_frameid>.
+
+=head2 FrameKind
+
+    $kind = $object->get_FrameKind();
+
+A L<FRAME_KIND|CoreWebView2::constants/FRAME_KIND> constant.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2frameinfo2#get_framekind>.
+
+=head2 Name
+
+    $name = $object->get_Name();
+
+A string.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2frameinfo#get_name>.
+
+=head2 ParentFrameInfo
+
+    $frameInfo = $object->get_ParentFrameInfo();
+
+A L<CoreWebView2::FrameInfo> object.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2frameinfo2#get_parentframeinfo>.
+
+=head2 Source
+
+    $source = $object->get_Source();
+
+A string.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2frameinfo#get_source>.
+
+=cut

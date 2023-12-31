@@ -1,0 +1,64 @@
+=pod
+
+=head1 NAME
+
+CoreWebView2::LaunchingExternalUriSchemeEventArgs
+
+=head1 VERSION
+
+0.001.000
+
+=head1 SYNOPSIS
+
+TBD
+
+=head1 DESCRIPTION
+
+TBD
+
+=head1 METHODS
+
+=head2 GetDeferral
+
+    $value = $object->GetDeferral();
+
+Returns a L<CoreWebView2::Deferral> object
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2launchingexternalurischemeeventargs#getdeferral>.
+
+=head1 PROPERTIES
+
+=head2 Cancel
+
+    $value = $object->get_Cancel();
+    $object->put_Cancel($value);
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2launchingexternalurischemeeventargs#get_cancel>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2launchingexternalurischemeeventargs#put_cancel>.
+
+=head2 InitiatingOrigin
+
+    $value = $object->get_InitiatingOrigin();
+
+A string.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2launchingexternalurischemeeventargs#get_initiatingorigin>.
+
+=head2 IsUserInitiated
+
+    $value = $object->get_IsUserInitiated();
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2launchingexternalurischemeeventargs#get_isuserinitiated>.
+
+=head2 Uri
+
+    $value = $object->get_Uri();
+
+A string.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2launchingexternalurischemeeventargs#get_uri>.
+
+=cut

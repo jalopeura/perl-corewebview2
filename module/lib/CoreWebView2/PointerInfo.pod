@@ -1,0 +1,275 @@
+=pod
+
+=head1 NAME
+
+CoreWebView2::PointerInfo
+
+=head1 VERSION
+
+0.001.000
+
+=head1 SYNOPSIS
+
+TBD
+
+=head1 DESCRIPTION
+
+TBD
+
+=head1 METHODS
+
+=head1 PROPERTIES
+
+=head2 ButtonChangeKind
+
+    $buttonChangeKind = $object->get_ButtonChangeKind();
+    $object->put_ButtonChangeKind($buttonChangeKind);
+
+An integer.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2pointerinfo#get_buttonchangekind>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2pointerinfo#put_buttonchangekind>.
+
+=head2 DisplayRect
+
+    $displayRect = $object->get_DisplayRect();
+    $object->put_DisplayRect($displayRect);
+
+A RECT (hashref C<{ left, right, top, bottom }>).
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2pointerinfo#get_displayrect>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2pointerinfo#put_displayrect>.
+
+=head2 FrameId
+
+    $frameId = $object->get_FrameId();
+    $object->put_FrameId($frameId);
+
+An unsigned integer.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2pointerinfo#get_frameid>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2pointerinfo#put_frameid>.
+
+=head2 HimetricLocation
+
+    $himetricLocation = $object->get_HimetricLocation();
+    $object->put_HimetricLocation($himetricLocation);
+
+A POINT (arrayref C<[x, y]>).
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2pointerinfo#get_himetriclocation>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2pointerinfo#put_himetriclocation>.
+
+=head2 HimetricLocationRaw
+
+    $himetricLocationRaw = $object->get_HimetricLocationRaw();
+    $object->put_HimetricLocationRaw($himetricLocationRaw);
+
+A POINT (arrayref C<[x, y]>).
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2pointerinfo#get_himetriclocationraw>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2pointerinfo#put_himetriclocationraw>.
+
+=head2 HistoryCount
+
+    $historyCount = $object->get_HistoryCount();
+    $object->put_HistoryCount($historyCount);
+
+An unsigned integer.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2pointerinfo#get_historycount>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2pointerinfo#put_historycount>.
+
+=head2 InputData
+
+    $inputData = $object->get_InputData();
+    $object->put_InputData($inputData);
+
+An integer.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2pointerinfo#get_inputdata>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2pointerinfo#put_inputdata>.
+
+=head2 KeyStates
+
+    $keyStates = $object->get_KeyStates();
+    $object->put_KeyStates($keyStates);
+
+An unsigned integer.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2pointerinfo#get_keystates>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2pointerinfo#put_keystates>.
+
+=head2 PenFlags
+
+    $penFLags = $object->get_PenFlags();
+    $object->put_PenFlags($penFLags);
+
+An unsigned integer.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2pointerinfo#get_penflags>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2pointerinfo#put_penflags>.
+
+=head2 PenMask
+
+    $penMask = $object->get_PenMask();
+    $object->put_PenMask($penMask);
+
+An unsigned integer.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2pointerinfo#get_penmask>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2pointerinfo#put_penmask>.
+
+=head2 PenPressure
+
+    $penPressure = $object->get_PenPressure();
+    $object->put_PenPressure($penPressure);
+
+An unsigned integer.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2pointerinfo#get_penpressure>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2pointerinfo#put_penpressure>.
+
+=head2 PenRotation
+
+    $penRotation = $object->get_PenRotation();
+    $object->put_PenRotation($penRotation);
+
+An unsigned integer.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2pointerinfo#get_penrotation>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2pointerinfo#put_penrotation>.
+
+=head2 PenTiltX
+
+    $penTiltX = $object->get_PenTiltX();
+    $object->put_PenTiltX($penTiltX);
+
+An integer.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2pointerinfo#get_pentiltx>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2pointerinfo#put_pentiltx>.
+
+=head2 PenTiltY
+
+    $penTiltY = $object->get_PenTiltY();
+    $object->put_PenTiltY($penTiltY);
+
+An integer.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2pointerinfo#get_pentilty>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2pointerinfo#put_pentilty>.
+
+=head2 PerformanceCount
+
+    $performanceCount = $object->get_PerformanceCount();
+    $object->put_PerformanceCount($performanceCount);
+
+An unsigned integer.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2pointerinfo#get_performancecount>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2pointerinfo#put_performancecount>.
+
+=head2 PixelLocation
+
+    $pixelLocation = $object->get_PixelLocation();
+    $object->put_PixelLocation($pixelLocation);
+
+A POINT (arrayref C<[x, y]>).
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2pointerinfo#get_pixellocation>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2pointerinfo#put_pixellocation>.
+
+=head2 PixelLocationRaw
+
+    $pixelLocationRaw = $object->get_PixelLocationRaw();
+    $object->put_PixelLocationRaw($pixelLocationRaw);
+
+A POINT (arrayref C<[x, y]>).
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2pointerinfo#get_pixellocationraw>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2pointerinfo#put_pixellocationraw>.
+
+=head2 PointerDeviceRect
+
+    $pointerDeviceRect = $object->get_PointerDeviceRect();
+    $object->put_PointerDeviceRect($pointerDeviceRect);
+
+A RECT (hashref C<{ left, right, top, bottom }>).
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2pointerinfo#get_pointerdevicerect>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2pointerinfo#put_pointerdevicerect>.
+
+=head2 PointerFlags
+
+    $pointerFlags = $object->get_PointerFlags();
+    $object->put_PointerFlags($pointerFlags);
+
+An unsigned integer.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2pointerinfo#get_pointerflags>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2pointerinfo#put_pointerflags>.
+
+=head2 PointerId
+
+    $pointerId = $object->get_PointerId();
+    $object->put_PointerId($pointerId);
+
+An unsigned integer.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2pointerinfo#get_pointerid>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2pointerinfo#put_pointerid>.
+
+=head2 PointerKind
+
+    $pointerKind = $object->get_PointerKind();
+    $object->put_PointerKind($pointerKind);
+
+An unsigned integer.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2pointerinfo#get_pointerkind>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2pointerinfo#put_pointerkind>.
+
+=head2 Time
+
+    $time = $object->get_Time();
+    $object->put_Time($time);
+
+An unsigned integer.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2pointerinfo#get_time>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2pointerinfo#put_time>.
+
+=head2 TouchContact
+
+    $touchContact = $object->get_TouchContact();
+    $object->put_TouchContact($touchContact);
+
+A RECT (hashref C<{ left, right, top, bottom }>).
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2pointerinfo#get_touchcontact>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2pointerinfo#put_touchcontact>.
+
+=head2 TouchContactRaw
+
+    $touchContactRaw = $object->get_TouchContactRaw();
+    $object->put_TouchContactRaw($touchContactRaw);
+
+A RECT (hashref C<{ left, right, top, bottom }>).
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2pointerinfo#get_touchcontactraw>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2pointerinfo#put_touchcontactraw>.
+
+=head2 TouchFlags
+
+    $touchFlags = $object->get_TouchFlags();
+    $object->put_TouchFlags($touchFlags);
+
+An unsigned integer.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2pointerinfo#get_touchflags>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2pointerinfo#put_touchflags>.
+
+=head2 TouchMask
+
+    $touchMask = $object->get_TouchMask();
+    $object->put_TouchMask($touchMask);
+
+An unsigned integer.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2pointerinfo#get_touchmask>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2pointerinfo#put_touchmask>.
+
+=head2 TouchOrientation
+
+    $touchOrientation = $object->get_TouchOrientation();
+    $object->put_TouchOrientation($touchOrientation);
+
+An unsigned integer.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2pointerinfo#get_touchorientation>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2pointerinfo#put_touchorientation>.
+
+=head2 TouchPressure
+
+    $touchPressure = $object->get_TouchPressure();
+    $object->put_TouchPressure($touchPressure);
+
+An unsigned integer.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2pointerinfo#get_touchpressure>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2pointerinfo#put_touchpressure>.
+
+=cut

@@ -1,0 +1,40 @@
+=pod
+
+=head1 NAME
+
+CoreWebView2::MoveFocusRequestedEventArgs
+
+=head1 VERSION
+
+0.001.000
+
+=head1 SYNOPSIS
+
+TBD
+
+=head1 DESCRIPTION
+
+TBD
+
+=head1 METHODS
+
+=head1 PROPERTIES
+
+=head2 Handled
+
+    $value = $object->get_Handled();
+    $object->put_Handled($value);
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2movefocusrequestedeventargs#get_handled>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2movefocusrequestedeventargs#put_handled>.
+
+=head2 Reason
+
+    $reason = $object->get_Reason();
+
+A L<MOVE_FOCUS_REASON|CoreWebView2::constants/MOVE_FOCUS_REASON> constant.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2movefocusrequestedeventargs#get_reason>.
+
+=cut

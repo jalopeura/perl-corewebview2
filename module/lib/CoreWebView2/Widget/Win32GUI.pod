@@ -1,0 +1,39 @@
+=pod
+
+=head1 NAME
+
+CoreWebView2::Widget::Win32GUI
+
+=head1 SYNOPSIS
+
+    use Win32::GUI;
+    use CoreWebView2::Widget::Prima;
+
+    my $window = Win32::GUI::Window->new(
+        # ...
+    );
+
+    $window->AddCoreWebView2(
+        -uri => 'https://www.perl.com',
+        -onNavigationStarting => sub {
+            # ...
+        },
+        -onNavigationCompleted => sub {
+            # ...
+        },
+        # ...
+    );
+
+    $Window->Show();
+
+    Win32::GUI::Dialog();
+
+=head1 DESCRIPTION
+
+This module allows for the creation of CoreWebView2 widget within the Win32::GUI framework. It also supplies the method AddCoreWebView2 under L<Win32::GUI::Window> to make adding widgets more convenient.
+
+C<CoreWebView2::Widget::Win32GUI> inherits all the methods of L<CoreWebView2::Widget> and L<Win32::GUI>.
+
+Note that the creation options inheirted from C<CoreWebView2::Widget::new>, whether used directly in C<new> or passed to C<AddCoreWebView2>, must have an initial '-' character; for example, C<-uri> instead of C<uri>.
+
+=cut

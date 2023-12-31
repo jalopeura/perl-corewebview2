@@ -1,0 +1,39 @@
+=pod
+
+=head1 NAME
+
+CoreWebView2::DevToolsProtocolEventReceivedEventArgs
+
+=head1 VERSION
+
+0.001.000
+
+=head1 SYNOPSIS
+
+TBD
+
+=head1 DESCRIPTION
+
+TBD
+
+=head1 METHODS
+
+=head1 PROPERTIES
+
+=head2 ParameterObjectAsJson
+
+    $parameterObjectAsJson = $object->get_ParameterObjectAsJson();
+
+A string.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2devtoolsprotocoleventreceivedeventargs#get_parameterobjectasjson>.
+
+=head2 SessionId
+
+    $sessionId = $object->get_SessionId();
+
+A string.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2devtoolsprotocoleventreceivedeventargs2#get_sessionid>.
+
+=cut

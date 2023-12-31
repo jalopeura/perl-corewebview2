@@ -1,0 +1,83 @@
+=pod
+
+=head1 NAME
+
+CoreWebView2::CustomSchemeRegistration
+
+=head1 VERSION
+
+0.001.000
+
+=head1 SYNOPSIS
+
+TBD
+
+=head1 DESCRIPTION
+
+TBD
+
+=head1 METHODS
+
+=head2 GetAllowedOrigins
+
+    ($allowedOriginsCount, $allowedOrigins) = $object->GetAllowedOrigins();
+
+Returns
+
+=over
+
+=item * $allowedOriginsCount: unsigned integer
+
+=item * $allowedOrigins: string
+
+=back
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2customschemeregistration#getallowedorigins>.
+
+=head2 SetAllowedOrigins
+
+    $result = $object->SetAllowedOrigins($allowedOriginsCount, $allowedOrigins);
+
+Takes
+
+=over
+
+=item * $allowedOriginsCount: unsigned integer
+
+=item * $allowedOrigins: string
+
+=back
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2customschemeregistration#setallowedorigins>.
+
+=head1 PROPERTIES
+
+=head2 HasAuthorityComponent
+
+    $hasAuthorityComponent = $object->get_HasAuthorityComponent();
+    $object->put_HasAuthorityComponent($hasAuthorityComponent);
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2customschemeregistration#get_hasauthoritycomponent>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2customschemeregistration#put_hasauthoritycomponent>.
+
+=head2 SchemeName
+
+    $schemeName = $object->get_SchemeName();
+
+A string.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2customschemeregistration#get_schemename>.
+
+=head2 TreatAsSecure
+
+    $treatAsSecure = $object->get_TreatAsSecure();
+    $object->put_TreatAsSecure($treatAsSecure);
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2customschemeregistration#get_treatassecure>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2customschemeregistration#put_treatassecure>.
+
+=cut

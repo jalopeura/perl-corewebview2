@@ -1,0 +1,56 @@
+=pod
+
+=head1 NAME
+
+CoreWebView2::WebResourceRequestedEventArgs
+
+=head1 VERSION
+
+0.001.000
+
+=head1 SYNOPSIS
+
+TBD
+
+=head1 DESCRIPTION
+
+TBD
+
+=head1 METHODS
+
+=head2 GetDeferral
+
+    $deferral = $object->GetDeferral();
+
+Returns a L<CoreWebView2::Deferral> object
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2webresourcerequestedeventargs#getdeferral>.
+
+=head1 PROPERTIES
+
+=head2 Request
+
+    $request = $object->get_Request();
+
+A L<CoreWebView2::WebResourceRequest> object.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2webresourcerequestedeventargs#get_request>.
+
+=head2 ResourceContext
+
+    $context = $object->get_ResourceContext();
+
+A L<WEB_RESOURCE_CONTEXT|CoreWebView2::constants/WEB_RESOURCE_CONTEXT> constant.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2webresourcerequestedeventargs#get_resourcecontext>.
+
+=head2 Response
+
+    $response = $object->get_Response();
+    $object->put_Response($response);
+
+A L<CoreWebView2::WebResourceResponse> object.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2webresourcerequestedeventargs#get_response>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2webresourcerequestedeventargs#put_response>.
+
+=cut

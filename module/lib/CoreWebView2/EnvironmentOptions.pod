@@ -1,0 +1,129 @@
+=pod
+
+=head1 NAME
+
+CoreWebView2::EnvironmentOptions
+
+=head1 VERSION
+
+0.001.000
+
+=head1 SYNOPSIS
+
+TBD
+
+=head1 DESCRIPTION
+
+TBD
+
+=head1 METHODS
+
+=head2 GetCustomSchemeRegistrations
+
+    ($count, $schemeRegistrations) = $object->GetCustomSchemeRegistrations();
+
+Returns
+
+=over
+
+=item * $count: unsigned integer
+
+=item * $schemeRegistrations: L<CoreWebView2::CustomSchemeRegistration> object
+
+=back
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2environmentoptions4#getcustomschemeregistrations>.
+
+=head2 SetCustomSchemeRegistrations
+
+    $result = $object->SetCustomSchemeRegistrations($count, $schemeRegistrations);
+
+Takes
+
+=over
+
+=item * $count: unsigned integer
+
+=item * $schemeRegistrations: L<CoreWebView2::CustomSchemeRegistration> object
+
+=back
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2environmentoptions4#setcustomschemeregistrations>.
+
+=head1 PROPERTIES
+
+=head2 AdditionalBrowserArguments
+
+    $value = $object->get_AdditionalBrowserArguments();
+    $object->put_AdditionalBrowserArguments($value);
+
+A string.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2environmentoptions#get_additionalbrowserarguments>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2environmentoptions#put_additionalbrowserarguments>.
+
+=head2 AllowSingleSignOnUsingOSPrimaryAccount
+
+    $allow = $object->get_AllowSingleSignOnUsingOSPrimaryAccount();
+    $object->put_AllowSingleSignOnUsingOSPrimaryAccount($allow);
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2environmentoptions#get_allowsinglesignonusingosprimaryaccount>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2environmentoptions#put_allowsinglesignonusingosprimaryaccount>.
+
+=head2 AreBrowserExtensionsEnabled
+
+    $value = $object->get_AreBrowserExtensionsEnabled();
+    $object->put_AreBrowserExtensionsEnabled($value);
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2environmentoptions6#get_arebrowserextensionsenabled>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2environmentoptions6#put_arebrowserextensionsenabled>.
+
+=head2 EnableTrackingPrevention
+
+    $value = $object->get_EnableTrackingPrevention();
+    $object->put_EnableTrackingPrevention($value);
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2environmentoptions5#get_enabletrackingprevention>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2environmentoptions5#put_enabletrackingprevention>.
+
+=head2 ExclusiveUserDataFolderAccess
+
+    $value = $object->get_ExclusiveUserDataFolderAccess();
+    $object->put_ExclusiveUserDataFolderAccess($value);
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2environmentoptions2#get_exclusiveuserdatafolderaccess>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2environmentoptions2#put_exclusiveuserdatafolderaccess>.
+
+=head2 IsCustomCrashReportingEnabled
+
+    $value = $object->get_IsCustomCrashReportingEnabled();
+    $object->put_IsCustomCrashReportingEnabled($value);
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2environmentoptions3#get_iscustomcrashreportingenabled>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2environmentoptions3#put_iscustomcrashreportingenabled>.
+
+=head2 Language
+
+    $value = $object->get_Language();
+    $object->put_Language($value);
+
+A string.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2environmentoptions#get_language>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2environmentoptions#put_language>.
+
+=head2 TargetCompatibleBrowserVersion
+
+    $value = $object->get_TargetCompatibleBrowserVersion();
+    $object->put_TargetCompatibleBrowserVersion($value);
+
+A string.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2environmentoptions#get_targetcompatiblebrowserversion>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2environmentoptions#put_targetcompatiblebrowserversion>.
+
+=cut

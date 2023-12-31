@@ -1,0 +1,176 @@
+=pod
+
+=head1 NAME
+
+CoreWebView2::Settings
+
+=head1 VERSION
+
+0.001.000
+
+=head1 SYNOPSIS
+
+TBD
+
+=head1 DESCRIPTION
+
+TBD
+
+=head1 METHODS
+
+=head1 PROPERTIES
+
+=head2 AreBrowserAcceleratorKeysEnabled
+
+    $areBrowserAcceleratorKeysEnabled = $object->get_AreBrowserAcceleratorKeysEnabled();
+    $object->put_AreBrowserAcceleratorKeysEnabled($areBrowserAcceleratorKeysEnabled);
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2settings3#get_arebrowseracceleratorkeysenabled>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2settings3#put_arebrowseracceleratorkeysenabled>.
+
+=head2 AreDefaultContextMenusEnabled
+
+    $enabled = $object->get_AreDefaultContextMenusEnabled();
+    $object->put_AreDefaultContextMenusEnabled($enabled);
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2settings#get_aredefaultcontextmenusenabled>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2settings#put_aredefaultcontextmenusenabled>.
+
+=head2 AreDefaultScriptDialogsEnabled
+
+    $areDefaultScriptDialogsEnabled = $object->get_AreDefaultScriptDialogsEnabled();
+    $object->put_AreDefaultScriptDialogsEnabled($areDefaultScriptDialogsEnabled);
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2settings#get_aredefaultscriptdialogsenabled>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2settings#put_aredefaultscriptdialogsenabled>.
+
+=head2 AreDevToolsEnabled
+
+    $areDevToolsEnabled = $object->get_AreDevToolsEnabled();
+    $object->put_AreDevToolsEnabled($areDevToolsEnabled);
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2settings#get_aredevtoolsenabled>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2settings#put_aredevtoolsenabled>.
+
+=head2 AreHostObjectsAllowed
+
+    $allowed = $object->get_AreHostObjectsAllowed();
+    $object->put_AreHostObjectsAllowed($allowed);
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2settings#get_arehostobjectsallowed>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2settings#put_arehostobjectsallowed>.
+
+=head2 HiddenPdfToolbarItems
+
+    $hidden_pdf_toolbar_items = $object->get_HiddenPdfToolbarItems();
+    $object->put_HiddenPdfToolbarItems($hidden_pdf_toolbar_items);
+
+A L<PDF_TOOLBAR_ITEMS|CoreWebView2::constants/PDF_TOOLBAR_ITEMS> constant.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2settings7#get_hiddenpdftoolbaritems>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2settings7#put_hiddenpdftoolbaritems>.
+
+=head2 IsBuiltInErrorPageEnabled
+
+    $enabled = $object->get_IsBuiltInErrorPageEnabled();
+    $object->put_IsBuiltInErrorPageEnabled($enabled);
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2settings#get_isbuiltinerrorpageenabled>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2settings#put_isbuiltinerrorpageenabled>.
+
+=head2 IsGeneralAutofillEnabled
+
+    $value = $object->get_IsGeneralAutofillEnabled();
+    $object->put_IsGeneralAutofillEnabled($value);
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2settings4#get_isgeneralautofillenabled>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2settings4#put_isgeneralautofillenabled>.
+
+=head2 IsPasswordAutosaveEnabled
+
+    $value = $object->get_IsPasswordAutosaveEnabled();
+    $object->put_IsPasswordAutosaveEnabled($value);
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2settings4#get_ispasswordautosaveenabled>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2settings4#put_ispasswordautosaveenabled>.
+
+=head2 IsPinchZoomEnabled
+
+    $enabled = $object->get_IsPinchZoomEnabled();
+    $object->put_IsPinchZoomEnabled($enabled);
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2settings5#get_ispinchzoomenabled>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2settings5#put_ispinchzoomenabled>.
+
+=head2 IsReputationCheckingRequired
+
+    $value = $object->get_IsReputationCheckingRequired();
+    $object->put_IsReputationCheckingRequired($value);
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2settings8#get_isreputationcheckingrequired>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2settings8#put_isreputationcheckingrequired>.
+
+=head2 IsScriptEnabled
+
+    $isScriptEnabled = $object->get_IsScriptEnabled();
+    $object->put_IsScriptEnabled($isScriptEnabled);
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2settings#get_isscriptenabled>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2settings#put_isscriptenabled>.
+
+=head2 IsStatusBarEnabled
+
+    $isStatusBarEnabled = $object->get_IsStatusBarEnabled();
+    $object->put_IsStatusBarEnabled($isStatusBarEnabled);
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2settings#get_isstatusbarenabled>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2settings#put_isstatusbarenabled>.
+
+=head2 IsSwipeNavigationEnabled
+
+    $enabled = $object->get_IsSwipeNavigationEnabled();
+    $object->put_IsSwipeNavigationEnabled($enabled);
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2settings6#get_isswipenavigationenabled>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2settings6#put_isswipenavigationenabled>.
+
+=head2 IsWebMessageEnabled
+
+    $isWebMessageEnabled = $object->get_IsWebMessageEnabled();
+    $object->put_IsWebMessageEnabled($isWebMessageEnabled);
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2settings#get_iswebmessageenabled>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2settings#put_iswebmessageenabled>.
+
+=head2 IsZoomControlEnabled
+
+    $enabled = $object->get_IsZoomControlEnabled();
+    $object->put_IsZoomControlEnabled($enabled);
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2settings#get_iszoomcontrolenabled>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2settings#put_iszoomcontrolenabled>.
+
+=head2 UserAgent
+
+    $userAgent = $object->get_UserAgent();
+    $object->put_UserAgent($userAgent);
+
+A string.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2settings2#get_useragent>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2settings2#put_useragent>.
+
+=cut

@@ -1,0 +1,50 @@
+=pod
+
+=head1 NAME
+
+CoreWebView2::ControllerOptions
+
+=head1 VERSION
+
+0.001.000
+
+=head1 SYNOPSIS
+
+TBD
+
+=head1 DESCRIPTION
+
+TBD
+
+=head1 METHODS
+
+=head1 PROPERTIES
+
+=head2 IsInPrivateModeEnabled
+
+    $value = $object->get_IsInPrivateModeEnabled();
+    $object->put_IsInPrivateModeEnabled($value);
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2controlleroptions#get_isinprivatemodeenabled>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2controlleroptions#put_isinprivatemodeenabled>.
+
+=head2 ProfileName
+
+    $value = $object->get_ProfileName();
+    $object->put_ProfileName($value);
+
+A string.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2controlleroptions#get_profilename>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2controlleroptions#put_profilename>.
+
+=head2 ScriptLocale
+
+    $locale = $object->get_ScriptLocale();
+    $object->put_ScriptLocale($locale);
+
+A string.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2controlleroptions2#get_scriptlocale>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2controlleroptions2#put_scriptlocale>.
+
+=cut

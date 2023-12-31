@@ -1,0 +1,55 @@
+=pod
+
+=head1 NAME
+
+CoreWebView2::HttpHeadersCollectionIterator
+
+=head1 VERSION
+
+0.001.000
+
+=head1 SYNOPSIS
+
+TBD
+
+=head1 DESCRIPTION
+
+TBD
+
+=head1 METHODS
+
+=head2 GetCurrentHeader
+
+    ($name, $value) = $object->GetCurrentHeader();
+
+Returns
+
+=over
+
+=item * $name: string
+
+=item * $value: string
+
+=back
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2httpheaderscollectioniterator#getcurrentheader>.
+
+=head2 MoveNext
+
+    $hasNext = $object->MoveNext();
+
+Returns a boolean
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2httpheaderscollectioniterator#movenext>.
+
+=head1 PROPERTIES
+
+=head2 HasCurrentHeader
+
+    $hasCurrent = $object->get_HasCurrentHeader();
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2httpheaderscollectioniterator#get_hascurrentheader>.
+
+=cut

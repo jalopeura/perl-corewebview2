@@ -1,0 +1,36 @@
+=pod
+
+=head1 NAME
+
+CoreWebView2::Widget::Prima
+
+=head1 SYNOPSIS
+
+    use Prima qw(Application);
+    use CoreWebView2::Widget::Prima;
+
+    my $window = Prima::MainWindow->new(
+        # ...
+    );
+
+    $window->insert('CoreWebView2',
+        uri => 'https://www.perl.com',
+        onNavigationStarting => sub {
+            # ...
+        },
+        onNavigationCompleted => sub {
+            # ...
+        },
+        # ...
+    );
+
+    run Prima;
+
+=head1 DESCRIPTION
+
+This module allows for the creation of CoreWebView2 widget within the Prima framework. It also aliases C<Prima::CoreWebView2> to C<CoreWebView2::Widget::Prima> to allow you to easily insert a widget into a parent window.
+
+C<CoreWebView2::Widget::Prima> inherits all the methods of L<CoreWebView2::Widget> and L<Prima::Widget>.
+
+=cut
+

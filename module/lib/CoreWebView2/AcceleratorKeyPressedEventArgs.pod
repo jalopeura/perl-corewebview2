@@ -1,0 +1,103 @@
+=pod
+
+=head1 NAME
+
+CoreWebView2::AcceleratorKeyPressedEventArgs
+
+=head1 VERSION
+
+0.001.000
+
+=head1 SYNOPSIS
+
+TBD
+
+=head1 DESCRIPTION
+
+TBD
+
+=head1 METHODS
+
+=head1 PROPERTIES
+
+=head2 Handled
+
+    $handled = $object->get_Handled();
+    $object->put_Handled($handled);
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2acceleratorkeypressedeventargs#get_handled>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2acceleratorkeypressedeventargs#put_handled>.
+
+=head2 IsBrowserAcceleratorKeyEnabled
+
+    $value = $object->get_IsBrowserAcceleratorKeyEnabled();
+    $object->put_IsBrowserAcceleratorKeyEnabled($value);
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2acceleratorkeypressedeventargs2#get_isbrowseracceleratorkeyenabled>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2acceleratorkeypressedeventargs2#put_isbrowseracceleratorkeyenabled>.
+
+=head2 KeyEventKind
+
+    $keyEventKind = $object->get_KeyEventKind();
+
+A L<KEY_EVENT_KIND|CoreWebView2::constants/KEY_EVENT_KIND> constant.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2acceleratorkeypressedeventargs#get_keyeventkind>.
+
+=head2 KeyEventLParam
+
+    $lParam = $object->get_KeyEventLParam();
+
+An integer.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2acceleratorkeypressedeventargs#get_keyeventlparam>.
+
+=head2 PhysicalKeyStatus
+
+    $physicalKeyStatus = $object->get_PhysicalKeyStatus();
+
+A key status hashref.
+
+This hashref has the following keys:
+
+=over
+
+=item RepeatCount
+
+integer
+
+=item ScanCode
+
+integer
+
+=item IsExtendedKey
+
+boolean
+
+=item IsMenuKeyDown
+
+boolean
+
+=item WasKeyDown
+
+boolean
+
+=item IsKeyReleased
+
+boolean
+
+=back
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2acceleratorkeypressedeventargs#get_physicalkeystatus>.
+
+=head2 VirtualKey
+
+    $virtualKey = $object->get_VirtualKey();
+
+An unsigned integer.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2acceleratorkeypressedeventargs#get_virtualkey>.
+
+=cut

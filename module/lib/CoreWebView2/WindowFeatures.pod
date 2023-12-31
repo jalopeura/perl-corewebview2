@@ -1,0 +1,103 @@
+=pod
+
+=head1 NAME
+
+CoreWebView2::WindowFeatures
+
+=head1 VERSION
+
+0.001.000
+
+=head1 SYNOPSIS
+
+TBD
+
+=head1 DESCRIPTION
+
+TBD
+
+=head1 METHODS
+
+=head1 PROPERTIES
+
+=head2 HasPosition
+
+    $value = $object->get_HasPosition();
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2windowfeatures#get_hasposition>.
+
+=head2 HasSize
+
+    $value = $object->get_HasSize();
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2windowfeatures#get_hassize>.
+
+=head2 Height
+
+    $value = $object->get_Height();
+
+An unsigned integer.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2windowfeatures#get_height>.
+
+=head2 Left
+
+    $value = $object->get_Left();
+
+An unsigned integer.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2windowfeatures#get_left>.
+
+=head2 ShouldDisplayMenuBar
+
+    $value = $object->get_ShouldDisplayMenuBar();
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2windowfeatures#get_shoulddisplaymenubar>.
+
+=head2 ShouldDisplayScrollBars
+
+    $value = $object->get_ShouldDisplayScrollBars();
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2windowfeatures#get_shoulddisplayscrollbars>.
+
+=head2 ShouldDisplayStatus
+
+    $value = $object->get_ShouldDisplayStatus();
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2windowfeatures#get_shoulddisplaystatus>.
+
+=head2 ShouldDisplayToolbar
+
+    $value = $object->get_ShouldDisplayToolbar();
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2windowfeatures#get_shoulddisplaytoolbar>.
+
+=head2 Top
+
+    $value = $object->get_Top();
+
+An unsigned integer.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2windowfeatures#get_top>.
+
+=head2 Width
+
+    $value = $object->get_Width();
+
+An unsigned integer.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2windowfeatures#get_width>.
+
+=cut

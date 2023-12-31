@@ -1,0 +1,212 @@
+=pod
+
+=head1 NAME
+
+CoreWebView2::PrintSettings
+
+=head1 VERSION
+
+0.001.000
+
+=head1 SYNOPSIS
+
+TBD
+
+=head1 DESCRIPTION
+
+TBD
+
+=head1 METHODS
+
+=head1 PROPERTIES
+
+=head2 Collation
+
+    $value = $object->get_Collation();
+    $object->put_Collation($value);
+
+A L<PRINT_COLLATION|CoreWebView2::constants/PRINT_COLLATION> constant.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2printsettings2#get_collation>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2printsettings2#put_collation>.
+
+=head2 ColorMode
+
+    $value = $object->get_ColorMode();
+    $object->put_ColorMode($value);
+
+A L<PRINT_COLOR_MODE|CoreWebView2::constants/PRINT_COLOR_MODE> constant.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2printsettings2#get_colormode>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2printsettings2#put_colormode>.
+
+=head2 Copies
+
+    $value = $object->get_Copies();
+    $object->put_Copies($value);
+
+An integer.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2printsettings2#get_copies>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2printsettings2#put_copies>.
+
+=head2 Duplex
+
+    $value = $object->get_Duplex();
+    $object->put_Duplex($value);
+
+A L<PRINT_DUPLEX|CoreWebView2::constants/PRINT_DUPLEX> constant.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2printsettings2#get_duplex>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2printsettings2#put_duplex>.
+
+=head2 FooterUri
+
+    $footerUri = $object->get_FooterUri();
+    $object->put_FooterUri($footerUri);
+
+A string.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2printsettings#get_footeruri>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2printsettings#put_footeruri>.
+
+=head2 HeaderTitle
+
+    $headerTitle = $object->get_HeaderTitle();
+    $object->put_HeaderTitle($headerTitle);
+
+A string.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2printsettings#get_headertitle>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2printsettings#put_headertitle>.
+
+=head2 MarginBottom
+
+    $marginBottom = $object->get_MarginBottom();
+    $object->put_MarginBottom($marginBottom);
+
+A number.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2printsettings#get_marginbottom>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2printsettings#put_marginbottom>.
+
+=head2 MarginLeft
+
+    $marginLeft = $object->get_MarginLeft();
+    $object->put_MarginLeft($marginLeft);
+
+A number.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2printsettings#get_marginleft>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2printsettings#put_marginleft>.
+
+=head2 MarginRight
+
+    $marginRight = $object->get_MarginRight();
+    $object->put_MarginRight($marginRight);
+
+A number.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2printsettings#get_marginright>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2printsettings#put_marginright>.
+
+=head2 MarginTop
+
+    $marginTop = $object->get_MarginTop();
+    $object->put_MarginTop($marginTop);
+
+A number.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2printsettings#get_margintop>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2printsettings#put_margintop>.
+
+=head2 MediaSize
+
+    $value = $object->get_MediaSize();
+    $object->put_MediaSize($value);
+
+A L<PRINT_MEDIA_SIZE|CoreWebView2::constants/PRINT_MEDIA_SIZE> constant.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2printsettings2#get_mediasize>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2printsettings2#put_mediasize>.
+
+=head2 Orientation
+
+    $orientation = $object->get_Orientation();
+    $object->put_Orientation($orientation);
+
+A L<PRINT_ORIENTATION|CoreWebView2::constants/PRINT_ORIENTATION> constant.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2printsettings#get_orientation>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2printsettings#put_orientation>.
+
+=head2 PageHeight
+
+    $pageHeight = $object->get_PageHeight();
+    $object->put_PageHeight($pageHeight);
+
+A number.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2printsettings#get_pageheight>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2printsettings#put_pageheight>.
+
+=head2 PageRanges
+
+    $value = $object->get_PageRanges();
+    $object->put_PageRanges($value);
+
+A string.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2printsettings2#get_pageranges>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2printsettings2#put_pageranges>.
+
+=head2 PageWidth
+
+    $pageWidth = $object->get_PageWidth();
+    $object->put_PageWidth($pageWidth);
+
+A number.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2printsettings#get_pagewidth>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2printsettings#put_pagewidth>.
+
+=head2 PagesPerSide
+
+    $value = $object->get_PagesPerSide();
+    $object->put_PagesPerSide($value);
+
+An integer.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2printsettings2#get_pagesperside>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2printsettings2#put_pagesperside>.
+
+=head2 PrinterName
+
+    $value = $object->get_PrinterName();
+    $object->put_PrinterName($value);
+
+A string.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2printsettings2#get_printername>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2printsettings2#put_printername>.
+
+=head2 ScaleFactor
+
+    $scaleFactor = $object->get_ScaleFactor();
+    $object->put_ScaleFactor($scaleFactor);
+
+A number.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2printsettings#get_scalefactor>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2printsettings#put_scalefactor>.
+
+=head2 ShouldPrintBackgrounds
+
+    $shouldPrintBackgrounds = $object->get_ShouldPrintBackgrounds();
+    $object->put_ShouldPrintBackgrounds($shouldPrintBackgrounds);
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2printsettings#get_shouldprintbackgrounds>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2printsettings#put_shouldprintbackgrounds>.
+
+=head2 ShouldPrintHeaderAndFooter
+
+    $shouldPrintHeaderAndFooter = $object->get_ShouldPrintHeaderAndFooter();
+    $object->put_ShouldPrintHeaderAndFooter($shouldPrintHeaderAndFooter);
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2printsettings#get_shouldprintheaderandfooter>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2printsettings#put_shouldprintheaderandfooter>.
+
+=head2 ShouldPrintSelectionOnly
+
+    $shouldPrintSelectionOnly = $object->get_ShouldPrintSelectionOnly();
+    $object->put_ShouldPrintSelectionOnly($shouldPrintSelectionOnly);
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2printsettings#get_shouldprintselectiononly>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2printsettings#put_shouldprintselectiononly>.
+
+=cut

@@ -1,0 +1,63 @@
+=pod
+
+=head1 NAME
+
+CoreWebView2::ProcessFailedEventArgs
+
+=head1 VERSION
+
+0.001.000
+
+=head1 SYNOPSIS
+
+TBD
+
+=head1 DESCRIPTION
+
+TBD
+
+=head1 METHODS
+
+=head1 PROPERTIES
+
+=head2 ExitCode
+
+    $exitCode = $object->get_ExitCode();
+
+An integer.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2processfailedeventargs2#get_exitcode>.
+
+=head2 FrameInfosForFailedProcess
+
+    $frames = $object->get_FrameInfosForFailedProcess();
+
+A L<CoreWebView2::FrameInfoCollection> object.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2processfailedeventargs2#get_frameinfosforfailedprocess>.
+
+=head2 ProcessDescription
+
+    $processDescription = $object->get_ProcessDescription();
+
+A string.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2processfailedeventargs2#get_processdescription>.
+
+=head2 ProcessFailedKind
+
+    $processFailedKind = $object->get_ProcessFailedKind();
+
+A L<PROCESS_FAILED_KIND|CoreWebView2::constants/PROCESS_FAILED_KIND> constant.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2processfailedeventargs#get_processfailedkind>.
+
+=head2 Reason
+
+    $reason = $object->get_Reason();
+
+A L<PROCESS_FAILED_REASON|CoreWebView2::constants/PROCESS_FAILED_REASON> constant.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2processfailedeventargs2#get_reason>.
+
+=cut

@@ -1,0 +1,45 @@
+=pod
+
+=head1 NAME
+
+CoreWebView2::DevToolsProtocolEventReceiver
+
+=head1 VERSION
+
+0.001.000
+
+=head1 SYNOPSIS
+
+TBD
+
+=head1 DESCRIPTION
+
+TBD
+
+=head1 METHODS
+
+=head1 EVENTS
+
+=head2 DevToolsProtocolEventReceived
+
+    $token = $object->add_DevToolsProtocolEventReceived($handler);
+    $result = $object->remove_DevToolsProtocolEventReceived($token);
+
+    # in handler class
+    sub DevToolsProtocolEventReceived {
+        my ($self, $sender, $args) = @_;
+
+        # handle the event here
+    }
+
+Passes
+
+=over
+
+=item * $sender: L<CoreWebView2> object
+
+=item * $args: L<CoreWebView2::DevToolsProtocolEventReceivedEventArgs> object
+
+=back
+
+=cut

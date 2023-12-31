@@ -1,0 +1,92 @@
+=pod
+
+=head1 NAME
+
+CoreWebView2::Widget
+
+=head1 SYNOPSIS
+
+    use CoreWebView2::Widget::Standalone;
+
+    my $webview = CoreWebView2::Widget::Standalone->new(
+        uri => 'https://www.perl.com',
+        onNavigationStarting => sub {
+            # ...
+        },
+        onNavigationCompleted => sub {
+            # ...
+        },
+    );
+
+    $webview->run();
+
+=head1 DESCRIPTION
+
+This module is a convenience wrapper around the main CoreWebView2 classes.
+
+CoreWebView2::Widget represents the on-screen window and contains an L<Environment|CoreWebView2::Environment>; CoreWebView2::Widget::View wraps an instance of a browser window and contains a  L<CorewWebView2|CoreWebView2::CorewWebView2> and a L<Controller|CoreWebView2::Controller>.
+
+The arguments for the events are as described in the documentation; the handler for an event will either be a Widget or a View.
+
+=head1 SUBCLASSES
+
+=over
+
+=item L<Standalone|CoreWebView2::Widget::Standalone>
+
+=item L<Win32GUI|CoreWebView2::Widget::Win32GUI>
+
+=item L<Prima|CoreWebView2::Widget::Prima>
+
+=back
+
+head1 WIDGET METHODS
+
+In addition to the methods below, Widget will forward Environment methods to the contained Environment.
+
+(Note that Environment methods are C<CamelCase>, Widget methods are C<snake_case>.)
+
+=head2 new
+
+Takes the following parameters:
+
+=over
+
+=item uri
+
+Optional; the initial URI of the first View
+
+=item environment
+
+Optional; can take either an href of environment options, an existing L<CoreWebView2::EnvironmentOptions> object, or an existing C<CoreWebView2::Widget> object.
+
+=item onI<EVENT>
+
+Hooks up the given event handlers.
+
+=back
+
+=head2 new_window
+
+Creates a new Widget window with that uses the environment of the current window
+
+=head2 add_view($uri, $force)
+
+Adds a View to the current Widget. C<$uri> is the initial URI of the View, C<$force> causes the new View to become the active View.
+
+(A Widget automatically adds its first View.)
+
+=head2 views
+
+Returns a list of all the Views in the Widget
+
+=head2 get_active_view
+=head2 set_active_view($active)
+
+Gets or sets the active View. You can set via a View object or via an index.
+
+head1 VIEW METHODS
+
+View has no methods of its own, but forwards Controller and CoreWebView2 to the contained objects.
+
+=cut

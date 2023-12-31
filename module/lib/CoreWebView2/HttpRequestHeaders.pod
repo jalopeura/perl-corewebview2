@@ -1,0 +1,111 @@
+=pod
+
+=head1 NAME
+
+CoreWebView2::HttpRequestHeaders
+
+=head1 VERSION
+
+0.001.000
+
+=head1 SYNOPSIS
+
+TBD
+
+=head1 DESCRIPTION
+
+TBD
+
+=head1 METHODS
+
+=head2 Contains
+
+    $contains = $object->Contains($name);
+
+Takes
+
+=over
+
+=item * $name: string
+
+=back
+
+Returns a boolean
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2httprequestheaders#contains>.
+
+=head2 GetHeader
+
+    $value = $object->GetHeader($name);
+
+Takes
+
+=over
+
+=item * $name: string
+
+=back
+
+Returns a string
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2httprequestheaders#getheader>.
+
+=head2 GetHeaders
+
+    $iterator = $object->GetHeaders($name);
+
+Takes
+
+=over
+
+=item * $name: string
+
+=back
+
+Returns a L<CoreWebView2::HttpHeadersCollectionIterator> object
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2httprequestheaders#getheaders>.
+
+=head2 GetIterator
+
+    $iterator = $object->GetIterator();
+
+Returns a L<CoreWebView2::HttpHeadersCollectionIterator> object
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2httprequestheaders#getiterator>.
+
+=head2 RemoveHeader
+
+    $result = $object->RemoveHeader($name);
+
+Takes
+
+=over
+
+=item * $name: string
+
+=back
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2httprequestheaders#removeheader>.
+
+=head2 SetHeader
+
+    $result = $object->SetHeader($name, $value);
+
+Takes
+
+=over
+
+=item * $name: string
+
+=item * $value: string
+
+=back
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2httprequestheaders#setheader>.
+
+=cut

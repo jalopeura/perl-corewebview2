@@ -1,0 +1,387 @@
+=pod
+
+=head1 NAME
+
+CoreWebView2::Profile
+
+=head1 VERSION
+
+0.001.000
+
+=head1 SYNOPSIS
+
+TBD
+
+=head1 DESCRIPTION
+
+TBD
+
+=head1 METHODS
+
+=head2 AddBrowserExtension
+
+    $result = $object->AddBrowserExtension($extensionFolderPath, $handler);
+
+Takes
+
+=over
+
+=item * $extensionFolderPath: string
+
+=item * $handler: event handler object
+
+=back
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+Triggers L</ProfileAddBrowserExtensionCompleted>
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2profile7#addbrowserextension>.
+
+=head2 ClearBrowsingData
+
+    $result = $object->ClearBrowsingData($dataKinds, $handler);
+
+Takes
+
+=over
+
+=item * $dataKinds: L<BROWSING_DATA_KINDS|CoreWebView2::constants/BROWSING_DATA_KINDS> constant
+
+=item * $handler: event handler object
+
+=back
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+Triggers L</ClearBrowsingDataCompleted>
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2profile2#clearbrowsingdata>.
+
+=head2 ClearBrowsingDataAll
+
+    $result = $object->ClearBrowsingDataAll($handler);
+
+Takes
+
+=over
+
+=item * $handler: event handler object
+
+=back
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+Triggers L</ClearBrowsingDataCompleted>
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2profile2#clearbrowsingdataall>.
+
+=head2 ClearBrowsingDataInTimeRange
+
+    $result = $object->ClearBrowsingDataInTimeRange($dataKinds, $startTime, $endTime, $handler);
+
+Takes
+
+=over
+
+=item * $dataKinds: L<BROWSING_DATA_KINDS|CoreWebView2::constants/BROWSING_DATA_KINDS> constant
+
+=item * $startTime: number
+
+=item * $endTime: number
+
+=item * $handler: event handler object
+
+=back
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+Triggers L</ClearBrowsingDataCompleted>
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2profile2#clearbrowsingdataintimerange>.
+
+=head2 Delete
+
+    $result = $object->Delete();
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2profile8#delete>.
+
+=head2 GetBrowserExtensions
+
+    $result = $object->GetBrowserExtensions($handler);
+
+Takes
+
+=over
+
+=item * $handler: event handler object
+
+=back
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+Triggers L</ProfileGetBrowserExtensionsCompleted>
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2profile7#getbrowserextensions>.
+
+=head2 GetNonDefaultPermissionSettings
+
+    $result = $object->GetNonDefaultPermissionSettings($completedHandler);
+
+Takes
+
+=over
+
+=item * $completedHandler: event handler object
+
+=back
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+Triggers L</GetNonDefaultPermissionSettingsCompleted>
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2profile4#getnondefaultpermissionsettings>.
+
+=head2 SetPermissionState
+
+    $result = $object->SetPermissionState($permissionKind, $origin, $state, $completedHandler);
+
+Takes
+
+=over
+
+=item * $permissionKind: L<PERMISSION_KIND|CoreWebView2::constants/PERMISSION_KIND> constant
+
+=item * $origin: string
+
+=item * $state: L<PERMISSION_STATE|CoreWebView2::constants/PERMISSION_STATE> constant
+
+=item * $completedHandler: event handler object
+
+=back
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+Triggers L</SetPermissionStateCompleted>
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2profile4#setpermissionstate>.
+
+test line
+
+=head1 PROPERTIES
+
+=head2 CookieManager
+
+    $cookieManager = $object->get_CookieManager();
+
+A L<CoreWebView2::CookieManager> object.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2profile5#get_cookiemanager>.
+
+=head2 DefaultDownloadFolderPath
+
+    $value = $object->get_DefaultDownloadFolderPath();
+    $object->put_DefaultDownloadFolderPath($value);
+
+A string.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2profile#get_defaultdownloadfolderpath>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2profile#put_defaultdownloadfolderpath>.
+
+=head2 IsGeneralAutofillEnabled
+
+    $value = $object->get_IsGeneralAutofillEnabled();
+    $object->put_IsGeneralAutofillEnabled($value);
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2profile6#get_isgeneralautofillenabled>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2profile6#put_isgeneralautofillenabled>.
+
+=head2 IsInPrivateModeEnabled
+
+    $value = $object->get_IsInPrivateModeEnabled();
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2profile#get_isinprivatemodeenabled>.
+
+=head2 IsPasswordAutosaveEnabled
+
+    $value = $object->get_IsPasswordAutosaveEnabled();
+    $object->put_IsPasswordAutosaveEnabled($value);
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2profile6#get_ispasswordautosaveenabled>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2profile6#put_ispasswordautosaveenabled>.
+
+=head2 PreferredColorScheme
+
+    $value = $object->get_PreferredColorScheme();
+    $object->put_PreferredColorScheme($value);
+
+A L<PREFERRED_COLOR_SCHEME|CoreWebView2::constants/PREFERRED_COLOR_SCHEME> constant.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2profile#get_preferredcolorscheme>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2profile#put_preferredcolorscheme>.
+
+=head2 PreferredTrackingPreventionLevel
+
+    $value = $object->get_PreferredTrackingPreventionLevel();
+    $object->put_PreferredTrackingPreventionLevel($value);
+
+A L<TRACKING_PREVENTION_LEVEL|CoreWebView2::constants/TRACKING_PREVENTION_LEVEL> constant.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2profile3#get_preferredtrackingpreventionlevel>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2profile3#put_preferredtrackingpreventionlevel>.
+
+=head2 ProfileName
+
+    $value = $object->get_ProfileName();
+
+A string.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2profile#get_profilename>.
+
+=head2 ProfilePath
+
+    $value = $object->get_ProfilePath();
+
+A string.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2profile#get_profilepath>.
+
+=head1 EVENTS
+
+=head2 ClearBrowsingDataCompleted
+
+    $result = $object->ClearBrowsingData(...);
+    $result = $object->ClearBrowsingDataAll(...);
+    $result = $object->ClearBrowsingDataInTimeRange(...);
+
+    # in handler class
+    sub ClearBrowsingDataCompleted {
+        my ($self, $errorCode) = @_;
+
+        # handle the event here
+    }
+
+See L</ClearBrowsingData>, L</ClearBrowsingDataAll>, L</ClearBrowsingDataInTimeRange>.
+
+Passes
+
+=over
+
+=item * $errorCode: L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+=back
+
+=head2 GetNonDefaultPermissionSettingsCompleted
+
+    $result = $object->GetNonDefaultPermissionSettings(...);
+
+    # in handler class
+    sub GetNonDefaultPermissionSettingsCompleted {
+        my ($self, $errorCode, $collectionView) = @_;
+
+        # handle the event here
+    }
+
+See L</GetNonDefaultPermissionSettings>.
+
+Passes
+
+=over
+
+=item * $errorCode: L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+=item * $collectionView: L<CoreWebView2::PermissionSettingCollectionView> object
+
+=back
+
+=head2 ProfileAddBrowserExtensionCompleted
+
+    $result = $object->AddBrowserExtension(...);
+
+    # in handler class
+    sub ProfileAddBrowserExtensionCompleted {
+        my ($self, $errorCode, $extension) = @_;
+
+        # handle the event here
+    }
+
+See L</AddBrowserExtension>.
+
+Passes
+
+=over
+
+=item * $errorCode: L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+=item * $extension: L<CoreWebView2::BrowserExtension> object
+
+=back
+
+=head2 ProfileDeleted
+
+    $token = $object->add_Deleted($handler);
+    $result = $object->remove_Deleted($token);
+
+    # in handler class
+    sub ProfileDeleted {
+        my ($self, $sender) = @_;
+
+        # handle the event here
+    }
+
+Passes
+
+=over
+
+=item * $sender: L<CoreWebView2::Profile> object
+
+=back
+
+=head2 ProfileGetBrowserExtensionsCompleted
+
+    $result = $object->GetBrowserExtensions(...);
+
+    # in handler class
+    sub ProfileGetBrowserExtensionsCompleted {
+        my ($self, $errorCode, $extensionList) = @_;
+
+        # handle the event here
+    }
+
+See L</GetBrowserExtensions>.
+
+Passes
+
+=over
+
+=item * $errorCode: L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+=item * $extensionList: L<CoreWebView2::BrowserExtensionList> object
+
+=back
+
+=head2 SetPermissionStateCompleted
+
+    $result = $object->SetPermissionState(...);
+
+    # in handler class
+    sub SetPermissionStateCompleted {
+        my ($self, $errorCode) = @_;
+
+        # handle the event here
+    }
+
+See L</SetPermissionState>.
+
+Passes
+
+=over
+
+=item * $errorCode: L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+=back
+
+=cut

@@ -1,0 +1,127 @@
+=pod
+
+=head1 NAME
+
+CoreWebView2::ContextMenuTarget
+
+=head1 VERSION
+
+0.001.000
+
+=head1 SYNOPSIS
+
+TBD
+
+=head1 DESCRIPTION
+
+TBD
+
+=head1 METHODS
+
+=head1 PROPERTIES
+
+=head2 FrameUri
+
+    $value = $object->get_FrameUri();
+
+A string.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2contextmenutarget#get_frameuri>.
+
+=head2 HasLinkText
+
+    $value = $object->get_HasLinkText();
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2contextmenutarget#get_haslinktext>.
+
+=head2 HasLinkUri
+
+    $value = $object->get_HasLinkUri();
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2contextmenutarget#get_haslinkuri>.
+
+=head2 HasSelection
+
+    $value = $object->get_HasSelection();
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2contextmenutarget#get_hasselection>.
+
+=head2 HasSourceUri
+
+    $value = $object->get_HasSourceUri();
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2contextmenutarget#get_hassourceuri>.
+
+=head2 IsEditable
+
+    $value = $object->get_IsEditable();
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2contextmenutarget#get_iseditable>.
+
+=head2 IsRequestedForMainFrame
+
+    $value = $object->get_IsRequestedForMainFrame();
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2contextmenutarget#get_isrequestedformainframe>.
+
+=head2 Kind
+
+    $value = $object->get_Kind();
+
+A L<CONTEXT_MENU_TARGET_KIND|CoreWebView2::constants/CONTEXT_MENU_TARGET_KIND> constant.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2contextmenutarget#get_kind>.
+
+=head2 LinkText
+
+    $value = $object->get_LinkText();
+
+A string.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2contextmenutarget#get_linktext>.
+
+=head2 LinkUri
+
+    $value = $object->get_LinkUri();
+
+A string.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2contextmenutarget#get_linkuri>.
+
+=head2 PageUri
+
+    $value = $object->get_PageUri();
+
+A string.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2contextmenutarget#get_pageuri>.
+
+=head2 SelectionText
+
+    $value = $object->get_SelectionText();
+
+A string.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2contextmenutarget#get_selectiontext>.
+
+=head2 SourceUri
+
+    $value = $object->get_SourceUri();
+
+A string.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2contextmenutarget#get_sourceuri>.
+
+=cut

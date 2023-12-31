@@ -1,0 +1,274 @@
+=pod
+
+=head1 NAME
+
+CoreWebView2::Controller
+
+=head1 VERSION
+
+0.001.000
+
+=head1 SYNOPSIS
+
+TBD
+
+=head1 DESCRIPTION
+
+TBD
+
+=head1 METHODS
+
+=head2 Close
+
+    $result = $object->Close();
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2controller#close>.
+
+=head2 MoveFocus
+
+    $result = $object->MoveFocus($reason);
+
+Takes
+
+=over
+
+=item * $reason: L<MOVE_FOCUS_REASON|CoreWebView2::constants/MOVE_FOCUS_REASON> constant
+
+=back
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2controller#movefocus>.
+
+=head2 NotifyParentWindowPositionChanged
+
+    $result = $object->NotifyParentWindowPositionChanged();
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2controller#notifyparentwindowpositionchanged>.
+
+=head2 SetBoundsAndZoomFactor
+
+    $result = $object->SetBoundsAndZoomFactor($bounds, $zoomFactor);
+
+Takes
+
+=over
+
+=item * $bounds: RECT (hashref C<{ left, right, top, bottom }>)
+
+=item * $zoomFactor: number
+
+=back
+
+Returns a L<HRESULT|CoreWebView2::constants/HRESULT> constant
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2controller#setboundsandzoomfactor>.
+
+=head1 PROPERTIES
+
+=head2 AllowExternalDrop
+
+    $value = $object->get_AllowExternalDrop();
+    $object->put_AllowExternalDrop($value);
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2controller4#get_allowexternaldrop>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2controller4#put_allowexternaldrop>.
+
+=head2 Bounds
+
+    $bounds = $object->get_Bounds();
+    $object->put_Bounds($bounds);
+
+A RECT (hashref C<{ left, right, top, bottom }>).
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2controller#get_bounds>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2controller#put_bounds>.
+
+=head2 BoundsMode
+
+    $boundsMode = $object->get_BoundsMode();
+    $object->put_BoundsMode($boundsMode);
+
+A L<BOUNDS_MODE|CoreWebView2::constants/BOUNDS_MODE> constant.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2controller3#get_boundsmode>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2controller3#put_boundsmode>.
+
+=head2 CoreWebView2
+
+    $coreWebView2 = $object->get_CoreWebView2();
+
+A L<CoreWebView2> object.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2controller#get_corewebview2>.
+
+=head2 DefaultBackgroundColor
+
+    $backgroundColor = $object->get_DefaultBackgroundColor();
+    $object->put_DefaultBackgroundColor($backgroundColor);
+
+A color value.
+
+A color is a arrayref of 2 integers. The first element is the color in the form 0xRRGGBB, and the second is the alphacomponent; 0 is fully transparent and 255 is fully opqaue. When setting the value, it will also accept just the 0xRRGGBB integer, and supply 255 as the alpha value.
+
+(Note: If anybody out there is still using Windows 7, the Microsoft docs indicate that 255 is the only alpha value that will be accepted; other values will cause an error.)
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2controller2#get_defaultbackgroundcolor>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2controller2#put_defaultbackgroundcolor>.
+
+=head2 IsVisible
+
+    $isVisible = $object->get_IsVisible();
+    $object->put_IsVisible($isVisible);
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2controller#get_isvisible>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2controller#put_isvisible>.
+
+=head2 ParentWindow
+
+    $parentWindow = $object->get_ParentWindow();
+    $object->put_ParentWindow($parentWindow);
+
+An unsigned integer.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2controller#get_parentwindow>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2controller#put_parentwindow>.
+
+=head2 RasterizationScale
+
+    $scale = $object->get_RasterizationScale();
+    $object->put_RasterizationScale($scale);
+
+A number.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2controller3#get_rasterizationscale>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2controller3#put_rasterizationscale>.
+
+=head2 ShouldDetectMonitorScaleChanges
+
+    $value = $object->get_ShouldDetectMonitorScaleChanges();
+    $object->put_ShouldDetectMonitorScaleChanges($value);
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2controller3#get_shoulddetectmonitorscalechanges>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2controller3#put_shoulddetectmonitorscalechanges>.
+
+=head2 ZoomFactor
+
+    $zoomFactor = $object->get_ZoomFactor();
+    $object->put_ZoomFactor($zoomFactor);
+
+A number.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2controller#get_zoomfactor>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2controller#put_zoomfactor>.
+
+=head1 EVENTS
+
+=head2 AcceleratorKeyPressed
+
+    $token = $object->add_AcceleratorKeyPressed($handler);
+    $result = $object->remove_AcceleratorKeyPressed($token);
+
+    # in handler class
+    sub AcceleratorKeyPressed {
+        my ($self, $sender, $args) = @_;
+
+        # handle the event here
+    }
+
+Passes
+
+=over
+
+=item * $sender: L<CoreWebView2::Controller> object
+
+=item * $args: L<CoreWebView2::AcceleratorKeyPressedEventArgs> object
+
+=back
+
+=head2 FocusChanged
+
+    $token = $object->add_GotFocus($handler);
+    $token = $object->add_LostFocus($handler);
+    $result = $object->remove_GotFocus($token);
+    $result = $object->remove_LostFocus($token);
+
+    # in handler class
+    sub FocusChanged {
+        my ($self, $sender) = @_;
+
+        # handle the event here
+    }
+
+Passes
+
+=over
+
+=item * $sender: L<CoreWebView2::Controller> object
+
+=back
+
+=head2 MoveFocusRequested
+
+    $token = $object->add_MoveFocusRequested($handler);
+    $result = $object->remove_MoveFocusRequested($token);
+
+    # in handler class
+    sub MoveFocusRequested {
+        my ($self, $sender, $args) = @_;
+
+        # handle the event here
+    }
+
+Passes
+
+=over
+
+=item * $sender: L<CoreWebView2::Controller> object
+
+=item * $args: L<CoreWebView2::MoveFocusRequestedEventArgs> object
+
+=back
+
+=head2 RasterizationScaleChanged
+
+    $token = $object->add_RasterizationScaleChanged($handler);
+    $result = $object->remove_RasterizationScaleChanged($token);
+
+    # in handler class
+    sub RasterizationScaleChanged {
+        my ($self, $sender) = @_;
+
+        # handle the event here
+    }
+
+Passes
+
+=over
+
+=item * $sender: L<CoreWebView2::Controller> object
+
+=back
+
+=head2 ZoomFactorChanged
+
+    $token = $object->add_ZoomFactorChanged($handler);
+    $result = $object->remove_ZoomFactorChanged($token);
+
+    # in handler class
+    sub ZoomFactorChanged {
+        my ($self, $sender) = @_;
+
+        # handle the event here
+    }
+
+Passes
+
+=over
+
+=item * $sender: L<CoreWebView2::Controller> object
+
+=back
+
+=cut

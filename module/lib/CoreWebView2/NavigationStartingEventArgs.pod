@@ -1,0 +1,89 @@
+=pod
+
+=head1 NAME
+
+CoreWebView2::NavigationStartingEventArgs
+
+=head1 VERSION
+
+0.001.000
+
+=head1 SYNOPSIS
+
+TBD
+
+=head1 DESCRIPTION
+
+TBD
+
+=head1 METHODS
+
+=head1 PROPERTIES
+
+=head2 AdditionalAllowedFrameAncestors
+
+    $value = $object->get_AdditionalAllowedFrameAncestors();
+    $object->put_AdditionalAllowedFrameAncestors($value);
+
+A string.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2navigationstartingeventargs2#get_additionalallowedframeancestors>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2navigationstartingeventargs2#put_additionalallowedframeancestors>.
+
+=head2 Cancel
+
+    $cancel = $object->get_Cancel();
+    $object->put_Cancel($cancel);
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2navigationstartingeventargs#get_cancel>, L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2navigationstartingeventargs#put_cancel>.
+
+=head2 IsRedirected
+
+    $isRedirected = $object->get_IsRedirected();
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2navigationstartingeventargs#get_isredirected>.
+
+=head2 IsUserInitiated
+
+    $isUserInitiated = $object->get_IsUserInitiated();
+
+A boolean.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2navigationstartingeventargs#get_isuserinitiated>.
+
+=head2 NavigationId
+
+    $navigationId = $object->get_NavigationId();
+
+An unsigned integer.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2navigationstartingeventargs#get_navigationid>.
+
+=head2 NavigationKind
+
+    $navigation_kind = $object->get_NavigationKind();
+
+A L<NAVIGATION_KIND|CoreWebView2::constants/NAVIGATION_KIND> constant.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2navigationstartingeventargs3#get_navigationkind>.
+
+=head2 RequestHeaders
+
+    $requestHeaders = $object->get_RequestHeaders();
+
+A L<CoreWebView2::HttpRequestHeaders> object.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2navigationstartingeventargs#get_requestheaders>.
+
+=head2 Uri
+
+    $uri = $object->get_Uri();
+
+A string.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2navigationstartingeventargs#get_uri>.
+
+=cut

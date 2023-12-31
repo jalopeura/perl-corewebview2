@@ -1,0 +1,29 @@
+#include "HandlerBase.h"
+
+HandlerBase::HandlerBase(SV* perl_object, const char* type_name = NULL) :
+	m_perl_object{perl_object},
+	m_typename{type_name},
+	m_refcount{1} {}
+
+HandlerBase::~HandlerBase() {}
+
+HRESULT HandlerBase::QueryInterface(REFIID riid, void** ppvObject) {
+	printf("QueryInterface (refcount %d) in %s (%p)\n", m_refcount, m_typename, this);
+	// so far, we haven't encountered this, but once we do, what do we really need to do?
+	return E_NOINTERFACE;
+}
+
+ULONG HandlerBase::AddRef() {
+//	printf("AddRef (%d => %d) in %s (%p)\n", m_refcount, m_refcount+1, m_typename, this);
+	m_refcount++;
+	return m_refcount;
+}
+
+ULONG HandlerBase::Release() {
+//	printf("Release (%d => %d) in %s (%p)\n", m_refcount, m_refcount-1, m_typename, this);
+	m_refcount--;
+	if (m_refcount == 0) {
+		delete this;
+	}
+	return m_refcount;
+}

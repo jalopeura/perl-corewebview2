@@ -1,0 +1,47 @@
+=pod
+
+=head1 NAME
+
+CoreWebView2::ProcessInfoCollection
+
+=head1 VERSION
+
+0.001.000
+
+=head1 SYNOPSIS
+
+TBD
+
+=head1 DESCRIPTION
+
+TBD
+
+=head1 METHODS
+
+=head2 GetValueAtIndex
+
+    $processInfo = $object->GetValueAtIndex($index);
+
+Takes
+
+=over
+
+=item * $index: unsigned integer
+
+=back
+
+Returns a L<CoreWebView2::ProcessInfo> object
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2processinfocollection#getvalueatindex>.
+
+=head1 PROPERTIES
+
+=head2 Count
+
+    $count = $object->get_Count();
+
+An unsigned integer.
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2processinfocollection#get_count>.
+
+=cut

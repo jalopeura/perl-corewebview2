@@ -1,0 +1,29 @@
+=pod
+
+=head1 NAME
+
+CoreWebView2::FrameInfoCollection
+
+=head1 VERSION
+
+0.001.000
+
+=head1 SYNOPSIS
+
+TBD
+
+=head1 DESCRIPTION
+
+TBD
+
+=head1 METHODS
+
+=head2 GetIterator
+
+    $iterator = $object->GetIterator();
+
+Returns a L<CoreWebView2::FrameInfoCollectionIterator> object
+
+See L<https://docs.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2frameinfocollection#getiterator>.
+
+=cut
